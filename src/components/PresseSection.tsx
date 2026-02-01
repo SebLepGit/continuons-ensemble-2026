@@ -5,22 +5,20 @@ import { Newspaper, ExternalLink } from 'lucide-react';
 
 const pressArticles = [
   {
-    title: "Le maire sortant présente son bilan de mandat",
-    source: "Le Journal Local",
-    date: "15 Février 2025",
-    url: "#",
+    title: "« Six ans c'est long, mais c'est court pour tout réaliser » : Yannick Vacher repart en tête de liste pour les municipales",
+    source: "Le Journal de Saône-et-Loire",
+    date: "23 Janvier 2026",
+    url: "https://www.lejsl.com/elections/2026/01/23/six-ans-c-est-long-mais-c-est-court-pour-tout-realiser-yannick-vacher-repart-en-tete-de-liste-pour-les-municipales",
+    logo: "JSL",
+    logoColor: "bg-red-600",
   },
   {
-    title: "Continuons Ensemble : une équipe renouvelée pour le prochain mandat",
-    source: "Info Région",
-    date: "10 Février 2025",
-    url: "#",
-  },
-  {
-    title: "Les projets phares de la municipalité pour 2025-2031",
-    source: "La Gazette Municipale",
-    date: "5 Février 2025",
-    url: "#",
+    title: "Municipales 2026 : Yannick Vacher va briguer un nouveau mandat à Romanèche-Thorins",
+    source: "MesInfos / Le Patriote",
+    date: "28 Janvier 2026",
+    url: "https://mesinfos.fr/auvergne-rhone-alpes/municipales-2026-yannick-vacher-va-briguer-un-nouveau-mandat-a-romaneche-thorins-238629.html",
+    logo: "MI",
+    logoColor: "bg-blue-600",
   },
 ];
 
@@ -46,7 +44,7 @@ const PresseSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
+        <div className="grid gap-6 md:grid-cols-2 max-w-4xl mx-auto">
           {pressArticles.map((article, index) => (
             <motion.a
               key={index}
@@ -58,18 +56,27 @@ const PresseSection = () => {
               transition={{ duration: 0.5, delay: 0.1 * index }}
               className="group bg-card rounded-xl p-6 shadow-soft border border-border hover:shadow-card hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="flex items-start justify-between mb-4">
-                <span className="text-sm text-muted-foreground">{article.date}</span>
-                <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors" />
+              <div className="flex items-start gap-4">
+                {/* Logo placeholder */}
+                <div className={`flex-shrink-0 w-14 h-14 ${article.logoColor} rounded-lg flex items-center justify-center text-white font-bold text-lg shadow-md`}>
+                  {article.logo}
+                </div>
+                
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-sm text-muted-foreground">{article.date}</span>
+                    <ExternalLink className="w-4 h-4 text-muted-foreground group-hover:text-secondary transition-colors flex-shrink-0" />
+                  </div>
+                  
+                  <h3 className="font-heading font-semibold text-base md:text-lg text-foreground mb-2 group-hover:text-primary transition-colors line-clamp-3">
+                    {article.title}
+                  </h3>
+                  
+                  <p className="text-sm text-secondary font-medium">
+                    {article.source}
+                  </p>
+                </div>
               </div>
-              
-              <h3 className="font-heading font-semibold text-lg text-foreground mb-3 group-hover:text-primary transition-colors">
-                {article.title}
-              </h3>
-              
-              <p className="text-sm text-secondary font-medium">
-                {article.source}
-              </p>
             </motion.a>
           ))}
         </div>
