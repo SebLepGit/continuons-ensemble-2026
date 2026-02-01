@@ -69,7 +69,7 @@ const Footer = () => {
             © {currentYear} Continuons Ensemble - Tous droits réservés
           </p>
           <p className="text-primary-foreground/40 text-xs mt-2">
-            Élections municipales 2025
+            Élections municipales 2026
           </p>
         </div>
       </div>

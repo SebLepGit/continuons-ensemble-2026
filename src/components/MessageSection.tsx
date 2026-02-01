@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Quote } from 'lucide-react';
-import mairePortrait from '@/assets/maire-portrait.jpg';
+import mairePortrait from '@/assets/yannick-vacher-portrait.png';
 
 const MessageSection = () => {
   const ref = useRef(null);

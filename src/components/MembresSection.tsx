@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
+import yannickvacher from '@/assets/yannick-vacher-portrait.png';
 
 interface Member {
   name: string;
@@ -14,7 +15,7 @@ const members: Member[] = [
     name: "Yannick Vacher", 
     profession: "Maire sortant", 
     engagement: "Continuer à servir notre commune avec passion et détermination pour les 6 prochaines années.",
-    // photo: "/chemin/vers/photo.jpg" // Ajouter le chemin de la photo ici
+    photo: yannickvacher
   },
   { 
     name: "Marie Dupont", 

@@ -18,7 +18,7 @@ const pressArticles = [
     date: "28 Janvier 2026",
     url: "https://mesinfos.fr/auvergne-rhone-alpes/municipales-2026-yannick-vacher-va-briguer-un-nouveau-mandat-a-romaneche-thorins-238629.html",
     logo: "MI",
-    logoColor: "bg-blue-600",
+    logoColor: "bg-[#5e233a]",
   },
 ];
 
