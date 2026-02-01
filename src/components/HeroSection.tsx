@@ -13,7 +13,7 @@ const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
       {/* Background Image */}
       <div
@@ -25,7 +25,7 @@ const HeroSection = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex-1 flex items-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -41,34 +41,34 @@ const HeroSection = () => {
             Yannick Vacher
           </p>
           
-          <p className="text-lg text-primary-foreground/80 mb-12">
+          <p className="text-lg text-primary-foreground/80">
             Votre maire sortant, engagé pour notre commune
           </p>
         </motion.div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="absolute bottom-16 left-1/2 transform -translate-x-1/2"
-        >
-          <button
-            onClick={scrollToProgram}
-            className="group flex flex-col items-center gap-2 text-primary-foreground/90 hover:text-secondary transition-colors duration-300"
-          >
-            <span className="font-medium text-sm uppercase tracking-widest">
-              Découvrir le programme
-            </span>
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <ChevronDown size={32} className="group-hover:text-secondary transition-colors" />
-            </motion.div>
-          </button>
-        </motion.div>
       </div>
+
+      {/* CTA Button - Fixed at bottom of hero */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, delay: 0.6 }}
+        className="relative z-10 pb-8"
+      >
+        <button
+          onClick={scrollToProgram}
+          className="group flex flex-col items-center gap-2 text-primary-foreground/90 hover:text-secondary transition-colors duration-300"
+        >
+          <span className="font-medium text-sm uppercase tracking-widest">
+            Découvrir le programme
+          </span>
+          <motion.div
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ChevronDown size={32} className="group-hover:text-secondary transition-colors" />
+          </motion.div>
+        </button>
+      </motion.div>
     </section>
   );
 };
