@@ -51,10 +51,15 @@ const ReunionSection = () => {
                   </span>
                 </div>
 
-                <div className="flex items-center justify-center gap-3 text-foreground">
-                  <MapPin className="w-6 h-6 text-primary" />
-                  <span className="text-xl md:text-2xl font-heading font-semibold">
-                    Salle Benoît Raclet
+                <div className="flex flex-col items-center gap-1 text-foreground">
+                  <div className="flex items-center gap-3">
+                    <MapPin className="w-6 h-6 text-primary" />
+                    <span className="text-xl md:text-2xl font-heading font-semibold">
+                      Salle Benoît Raclet
+                    </span>
+                  </div>
+                  <span className="text-lg text-muted-foreground">
+                    Romanèche-Thorins
                   </span>
                 </div>
               </div>

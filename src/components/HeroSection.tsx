@@ -11,7 +11,9 @@ const HeroSection = () => {
     offset: ["start start", "end start"]
   });
   
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1.1, 1.3]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.7, 0.9]);
   
   const scrollToProgram = () => {
     const element = document.querySelector('#programme');
@@ -32,11 +34,14 @@ const HeroSection = () => {
         style={{ 
           backgroundImage: `url(${heroImage})`,
           y: backgroundY,
-          scale: 1.1
+          scale: backgroundScale
         }}
       >
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
+        {/* Overlay with dynamic opacity */}
+        <motion.div 
+          className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90"
+          style={{ opacity: overlayOpacity }}
+        />
       </motion.div>
 
       {/* Content */}
