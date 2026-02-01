@@ -2,10 +2,14 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Calendar, Clock, MapPin, Users } from 'lucide-react';
+import {useTrackSection} from "@/hooks/useTrackSection.ts";
 
 const ReunionSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+
+    // 👇 tracking analytics
+    useTrackSection(ref, "Reunion");
 
   return (
     <section id="reunion" className="section-padding bg-background" ref={ref}>

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import yannickvacher from '@/assets/yannick-vacher-portrait.png';
+import {useTrackSection} from "@/hooks/useTrackSection.ts";
 
 interface Member {
   name: string;
@@ -107,6 +108,9 @@ const members: Member[] = [
 const MembresSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+    // 👇 tracking analytics
+    useTrackSection(ref, "Membres");
 
   return (
     <section id="membres" className="section-padding bg-muted" ref={ref}>

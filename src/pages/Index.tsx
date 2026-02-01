@@ -6,9 +6,16 @@ import PresseSection from '@/components/PresseSection';
 import ProgrammeSection from '@/components/ProgrammeSection';
 import MembresSection from '@/components/MembresSection';
 import Footer from '@/components/Footer';
+import {useEffect} from "react";
+import { track } from "@/lib/mixpanel";
 
 const Index = () => {
-  return (
+
+    useEffect(() => {
+        track("Site Visited");
+    }, []);
+
+    return (
     <div className="min-h-screen bg-background">
       <Navbar />
       <main>

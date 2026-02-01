@@ -8,6 +8,7 @@ import {
   Building2, 
   Shield 
 } from 'lucide-react';
+import {useTrackSection} from "@/hooks/useTrackSection.ts";
 
 const programItems = [
   {
@@ -45,6 +46,9 @@ const programItems = [
 const ProgrammeSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+
+    // 👇 tracking analytics
+    useTrackSection(ref, "Programme");
 
   const getAnimationProps = (animation: string, index: number) => {
     const delay = 0.15 * index;

@@ -2,10 +2,14 @@ import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { useRef } from 'react';
 import heroImage from '@/assets/hero-team.jpg';
+import {useTrackSection} from "@/hooks/useTrackSection.ts";
 
 const HeroSection = () => {
   const sectionRef = useRef<HTMLElement>(null);
-  
+
+    // 👇 tracking analytics
+    useTrackSection(sectionRef, "Hero");
+
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ["start start", "end start"]
