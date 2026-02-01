@@ -52,7 +52,7 @@ const Navbar = () => {
               }`}
               whileHover={{ scale: 1.02 }}
             >
-              Continuons Ensemble
+              Continuons <span className="text-secondary">Ensemble</span>
             </motion.button>
 
             {/* Desktop Navigation */}

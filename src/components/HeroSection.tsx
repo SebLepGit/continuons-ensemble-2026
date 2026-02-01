@@ -56,14 +56,7 @@ const HeroSection = () => {
             Continuons
             <span className="block text-secondary">Ensemble</span>
           </h1>
-          
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-4 font-light">
-            Yannick Vacher
-          </p>
-          
-          <p className="text-lg text-primary-foreground/80">
-            Votre maire sortant, engagé pour notre commune
-          </p>
+
         </motion.div>
       </div>
 
