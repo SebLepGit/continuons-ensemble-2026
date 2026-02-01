@@ -29,10 +29,6 @@ const Footer = () => {
                 <Mail size={18} />
                 <span>contact@continuons-ensemble.fr</span>
               </a>
-              <div className="flex items-center gap-3 text-primary-foreground/80">
-                <MapPin size={18} />
-                <span>Mairie, Place de la République</span>
-              </div>
             </div>
           </div>
 
