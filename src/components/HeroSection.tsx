@@ -1,8 +1,18 @@
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
+import { useRef } from 'react';
 import heroImage from '@/assets/hero-team.jpg';
 
 const HeroSection = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"]
+  });
+  
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  
   const scrollToProgram = () => {
     const element = document.querySelector('#programme');
     if (element) {
@@ -12,17 +22,22 @@ const HeroSection = () => {
 
   return (
     <section
+      ref={sectionRef}
       id="hero"
       className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden"
     >
-      {/* Background Image */}
-      <div
+      {/* Background Image with Parallax */}
+      <motion.div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroImage})` }}
+        style={{ 
+          backgroundImage: `url(${heroImage})`,
+          y: backgroundY,
+          scale: 1.1
+        }}
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-gradient-to-b from-primary/80 via-primary/70 to-primary/90" />
-      </div>
+      </motion.div>
 
       {/* Content */}
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex-1 flex items-center">
