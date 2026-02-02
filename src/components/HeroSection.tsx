@@ -52,10 +52,23 @@ const HeroSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           {/* Logo / Title */}
-          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-6 leading-tight">
+          <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl text-primary-foreground mb-4 leading-tight">
             Continuons
             <span className="block text-secondary">Ensemble</span>
           </h1>
+          
+          <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide mb-8">
+            Élection municipale 2026
+          </p>
+
+          <a
+            href="https://www.service-public.fr/particuliers/vosdroits/R16396"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:scale-105"
+          >
+            S'inscrire sur les listes électorales
+          </a>
 
         </motion.div>
       </div>
