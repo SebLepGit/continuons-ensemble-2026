@@ -1,8 +1,15 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import yannickvacher from '@/assets/yannick-vacher-portrait.png';
-import {useTrackSection} from "@/hooks/useTrackSection.ts";
+import { useTrackSection } from "@/hooks/useTrackSection.ts";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 interface Member {
   name: string;
@@ -108,9 +115,10 @@ const members: Member[] = [
 const MembresSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
+  const [selectedMember, setSelectedMember] = useState<Member | null>(null);
 
-    // 👇 tracking analytics
-    useTrackSection(ref, "Membres");
+  // 👇 tracking analytics
+  useTrackSection(ref, "Membres");
 
   return (
     <section id="membres" className="section-padding bg-muted" ref={ref}>
@@ -136,7 +144,8 @@ const MembresSection = () => {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.4, delay: 0.05 * index }}
-              className="group text-center"
+              className="group text-center cursor-pointer"
+              onClick={() => setSelectedMember(member)}
             >
               <div className="relative mb-4">
                 <div className="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 mx-auto rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center overflow-hidden shadow-soft group-hover:shadow-card transition-all duration-300 group-hover:scale-105">
@@ -170,6 +179,40 @@ const MembresSection = () => {
           ))}
         </div>
       </div>
+
+      {/* Modal membre */}
+      <Dialog open={!!selectedMember} onOpenChange={() => setSelectedMember(null)}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-32 h-32 md:w-40 md:h-40 mb-4 rounded-full bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center overflow-hidden shadow-card">
+                {selectedMember?.photo ? (
+                  <img 
+                    src={selectedMember.photo} 
+                    alt={`Portrait de ${selectedMember.name}`}
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <span className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground">
+                    {selectedMember?.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                )}
+              </div>
+              <DialogTitle className="text-xl md:text-2xl font-heading text-primary">
+                {selectedMember?.name}
+              </DialogTitle>
+              <p className="text-secondary font-medium mt-1">
+                {selectedMember?.profession}
+              </p>
+            </div>
+          </DialogHeader>
+          <DialogDescription className="text-center pt-4 border-t border-border">
+            <span className="text-base text-foreground leading-relaxed italic">
+              "{selectedMember?.engagement}"
+            </span>
+          </DialogDescription>
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
