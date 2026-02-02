@@ -2,7 +2,6 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Newspaper, ExternalLink } from 'lucide-react';
-import {useTrackSection} from "@/hooks/useTrackSection.ts";
 
 const pressArticles = [
   {
@@ -26,9 +25,6 @@ const pressArticles = [
 const PresseSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-    // 👇 tracking analytics
-    useTrackSection(ref, "Presse");
 
   return (
     <section id="presse" className="section-padding bg-muted" ref={ref}>

@@ -3,14 +3,10 @@ import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Quote } from 'lucide-react';
 import mairePortrait from '@/assets/yannick-vacher-portrait.png';
-import {useTrackSection} from "@/hooks/useTrackSection.ts";
 
 const MessageSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-
-    // 👇 tracking analytics
-    useTrackSection(ref, "Message");
 
   return (
     <section id="message" className="section-padding bg-muted" ref={ref}>
