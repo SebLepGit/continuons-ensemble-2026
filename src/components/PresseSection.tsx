@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { Newspaper, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -35,6 +35,14 @@ const PresseSection = () => {
   const scrollNext = () => {
     setCurrent((prev) => (prev === pressArticles.length - 1 ? 0 : prev + 1));
   };
+
+  // Auto-scroll every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrent((prev) => (prev === pressArticles.length - 1 ? 0 : prev + 1));
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section id="presse" className="section-padding bg-muted" ref={ref}>
