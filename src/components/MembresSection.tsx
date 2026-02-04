@@ -2,6 +2,12 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import yannickvacher from '@/assets/yannick-vacher-portrait.png';
+import jeanpierrereynier from '@/assets/portraits/jeanpierre-reynier-portrait.png';
+import mauricefavre from '@/assets/portraits/maurice-favre-portrait.png';
+import josettegombert from '@/assets/portraits/josette-gombert-portrait.png';
+import joelbroutin from '@/assets/portraits/joel-broutin-portrait.png';
+import moniquedutraive from '@/assets/portraits/monique-dutraive-portrait.png';
+import fredericmeunier from '@/assets/portraits/frederic-meunier-portrait.png';
 
 interface Member {
   name: string;
@@ -20,12 +26,14 @@ const members: Member[] = [
   { 
     name: "Monique Dutraive", 
     profession: "", 
-    engagement: ""
+    engagement: "",
+      photo: moniquedutraive
   },
   { 
     name: "Jean-Pierre Reynier", 
     profession: "", 
-    engagement: ""
+    engagement: "",
+      photo: jeanpierrereynier
   },
   { 
     name: "Perrine Janin", 
@@ -35,7 +43,8 @@ const members: Member[] = [
   { 
     name: "Joël Broutin", 
     profession: "", 
-    engagement: ""
+    engagement: "",
+      photo: joelbroutin
   },
   { 
     name: "Pascale Romani", 
@@ -45,7 +54,8 @@ const members: Member[] = [
   { 
     name: "Maurice Favre", 
     profession: "", 
-    engagement: ""
+    engagement: "",
+      photo: mauricefavre
   },
   { 
     name: "Vanina Depardon", 
@@ -55,12 +65,14 @@ const members: Member[] = [
   { 
     name: "Frédéric Meunier", 
     profession: "", 
-    engagement: ""
+    engagement: "",
+      photo: fredericmeunier
   },
   { 
     name: "Josette Gombert", 
     profession: "", 
-    engagement: ""
+    engagement: "",
+      photo: josettegombert
   },
   { 
     name: "Raphaël Gaudin", 
