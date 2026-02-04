@@ -58,7 +58,7 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide mb-8">
-            Élection municipale 2026 - Yannick VACHER
+            Élection municipale 2026
           </p>
 
           <a
