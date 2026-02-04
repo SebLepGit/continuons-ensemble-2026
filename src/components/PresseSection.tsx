@@ -1,13 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useCallback, useEffect, useState } from 'react';
+import { useRef, useState } from 'react';
 import { Newspaper, ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  type CarouselApi,
-} from '@/components/ui/carousel';
 import { Button } from '@/components/ui/button';
 
 const pressArticles = [
@@ -32,28 +26,15 @@ const pressArticles = [
 const PresseSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
-  const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);
-  const [count, setCount] = useState(0);
 
-  useEffect(() => {
-    if (!api) return;
+  const scrollPrev = () => {
+    setCurrent((prev) => (prev === 0 ? pressArticles.length - 1 : prev - 1));
+  };
 
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap());
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap());
-    });
-  }, [api]);
-
-  const scrollPrev = useCallback(() => {
-    api?.scrollPrev();
-  }, [api]);
-
-  const scrollNext = useCallback(() => {
-    api?.scrollNext();
-  }, [api]);
+  const scrollNext = () => {
+    setCurrent((prev) => (prev === pressArticles.length - 1 ? 0 : prev + 1));
+  };
 
   return (
     <section id="presse" className="section-padding bg-muted" ref={ref}>
@@ -74,17 +55,15 @@ const PresseSection = () => {
         </motion.div>
 
         <div className="max-w-3xl mx-auto">
-          <Carousel
-            setApi={setApi}
-            opts={{
-              align: "center",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent>
+          {/* Carousel container */}
+          <div className="relative overflow-hidden">
+            <motion.div
+              className="flex transition-transform duration-500 ease-out"
+              animate={{ x: `-${current * 100}%` }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+            >
               {pressArticles.map((article, index) => (
-                <CarouselItem key={index}>
+                <div key={index} className="w-full flex-shrink-0 px-2">
                   <motion.a
                     href={article.url}
                     target="_blank"
@@ -116,10 +95,10 @@ const PresseSection = () => {
                       </div>
                     </div>
                   </motion.a>
-                </CarouselItem>
+                </div>
               ))}
-            </CarouselContent>
-          </Carousel>
+            </motion.div>
+          </div>
 
           {/* Navigation controls */}
           <div className="flex items-center justify-center gap-4 mt-6">
@@ -135,14 +114,14 @@ const PresseSection = () => {
 
             {/* Dots indicator */}
             <div className="flex gap-2">
-              {Array.from({ length: count }).map((_, index) => (
+              {pressArticles.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => api?.scrollTo(index)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                  onClick={() => setCurrent(index)}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
                     index === current 
                       ? 'bg-secondary w-8' 
-                      : 'bg-primary/20 hover:bg-primary/40'
+                      : 'bg-primary/20 hover:bg-primary/40 w-2.5'
                   }`}
                   aria-label={`Aller à l'article ${index + 1}`}
                 />
