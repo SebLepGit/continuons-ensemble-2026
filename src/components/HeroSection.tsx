@@ -56,7 +56,7 @@ const HeroSection = () => {
           <img 
             src={logoLight} 
             alt="Continuons Ensemble" 
-            className="h-24 md:h-36 lg:h-44 w-auto mx-auto mb-4"
+            className="h-32 md:h-48 lg:h-56 w-auto mx-auto mb-4"
           />
           
           <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide mb-8">

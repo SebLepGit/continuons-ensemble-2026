@@ -55,7 +55,7 @@ const Navbar = () => {
               <img 
                 src={isScrolled ? logoDark : logoLight} 
                 alt="Continuons Ensemble" 
-                className="h-8 md:h-10 w-auto"
+                className="h-10 md:h-14 w-auto"
               />
             </motion.button>
 

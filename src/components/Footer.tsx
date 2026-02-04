@@ -14,7 +14,7 @@ const Footer = () => {
             <img 
               src={logoLight} 
               alt="Continuons Ensemble" 
-              className="h-12 w-auto mb-4"
+              className="h-16 w-auto mb-4"
             />
             <p className="text-primary-foreground/80 leading-relaxed">
               Avec Yannick Vacher, continuons à construire l'avenir de notre commune.
