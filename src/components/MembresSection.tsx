@@ -18,89 +18,94 @@ const members: Member[] = [
     photo: yannickvacher
   },
   { 
-    name: "Marie Dupont", 
-    profession: "Enseignante", 
-    engagement: "L'éducation pour tous, priorité absolue. Former les citoyens de demain."
+    name: "Monique Dutraive", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Jean Martin", 
-    profession: "Artisan", 
-    engagement: "Soutenir nos commerces locaux et dynamiser l'économie de proximité."
+    name: "Jean-Pierre Reynier", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Sophie Bernard", 
-    profession: "Infirmière", 
-    engagement: "La santé au cœur de nos préoccupations, accessible à tous."
+    name: "Perrine Janin", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Pierre Moreau", 
-    profession: "Agriculteur", 
-    engagement: "Préserver notre patrimoine rural et promouvoir une agriculture durable."
+    name: "Joël Broutin", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Claire Rousseau", 
-    profession: "Architecte", 
-    engagement: "Un urbanisme respectueux de l'environnement et du cadre de vie."
+    name: "Pascale Romani", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Michel Leroy", 
-    profession: "Retraité", 
-    engagement: "L'expérience au service des générations futures et du lien intergénérationnel."
+    name: "Maurice Favre", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Isabelle Petit", 
-    profession: "Commerçante", 
-    engagement: "Dynamiser le centre-ville et attirer de nouvelles enseignes."
+    name: "Vanina Depardon", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "François Garcia", 
-    profession: "Ingénieur", 
-    engagement: "Innovation et modernisation des services publics numériques."
+    name: "Frédéric Meunier", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Anne Richard", 
-    profession: "Assistante sociale", 
-    engagement: "Solidarité et entraide envers les plus vulnérables."
+    name: "Josette Gombert", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Thomas Durand", 
-    profession: "Chef d'entreprise", 
-    engagement: "Créer des emplois locaux et attirer de nouvelles entreprises."
+    name: "Raphaël Gaudin", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Julie Lambert", 
-    profession: "Avocate", 
-    engagement: "Justice et équité pour tous dans l'accès aux services."
+    name: "Catherine Vincent", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Éric Mercier", 
-    profession: "Professeur", 
-    engagement: "La culture accessible à tous, moteur d'épanouissement."
+    name: "Sébastien Lépine", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Nathalie Bonnet", 
-    profession: "Médecin", 
-    engagement: "Améliorer l'accès aux soins et développer la prévention."
+    name: "Andrea Moscicki", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "David Laurent", 
-    profession: "Éducateur sportif", 
-    engagement: "Le sport pour la cohésion sociale et le bien-être de tous."
+    name: "Joaquin Fernandez", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Céline Girard", 
-    profession: "Comptable", 
-    engagement: "Une gestion rigoureuse et transparente des finances communales."
+    name: "Annie Rochet", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Olivier Roux", 
-    profession: "Pompier", 
-    engagement: "Sécurité et prévention des risques pour protéger nos habitants."
+    name: "Marc Dupuy", 
+    profession: "", 
+    engagement: ""
   },
   { 
-    name: "Valérie Simon", 
-    profession: "Bibliothécaire", 
-    engagement: "Promouvoir la lecture et le savoir pour tous les âges."
+    name: "Andrée Defnet", 
+    profession: "", 
+    engagement: ""
+  },
+  { 
+    name: "Jean-Pierre Large", 
+    profession: "", 
+    engagement: ""
   },
 ];
 
@@ -183,7 +188,7 @@ const MembresSection = () => {
             Notre Équipe
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            18 citoyens engagés pour l'avenir de notre commune
+            19 citoyens engagés pour l'avenir de notre commune
           </p>
         </motion.div>
 

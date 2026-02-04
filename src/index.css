@@ -7,55 +7,55 @@
 
 @layer base {
   :root {
-    /* Primary - Navy Blue */
-    --primary: 210 100% 20%;
+    /* Primary - Official Navy Blue #002E3F */
+    --primary: 195 100% 12%;
     --primary-foreground: 0 0% 100%;
     
-    /* Secondary - Vivid Green */
-    --secondary: 150 100% 40%;
+    /* Secondary - Official Green #00C291 */
+    --secondary: 163 100% 38%;
     --secondary-foreground: 0 0% 100%;
     
     /* Backgrounds */
     --background: 0 0% 100%;
-    --foreground: 210 100% 15%;
+    --foreground: 195 100% 10%;
     
     /* Cards and surfaces */
     --card: 0 0% 100%;
-    --card-foreground: 210 100% 15%;
+    --card-foreground: 195 100% 10%;
     
     --popover: 0 0% 100%;
-    --popover-foreground: 210 100% 15%;
+    --popover-foreground: 195 100% 10%;
     
     /* Muted colors */
-    --muted: 210 20% 96%;
-    --muted-foreground: 210 30% 40%;
+    --muted: 195 20% 96%;
+    --muted-foreground: 195 30% 35%;
     
-    /* Accent - Light blue tint */
-    --accent: 210 50% 95%;
-    --accent-foreground: 210 100% 20%;
+    /* Accent - Light tint */
+    --accent: 195 50% 95%;
+    --accent-foreground: 195 100% 12%;
     
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 195 40% 98%;
     
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 150 100% 40%;
+    --border: 195 20% 90%;
+    --input: 195 20% 90%;
+    --ring: 163 100% 38%;
     
     --radius: 0.75rem;
     
     /* Custom campaign colors */
-    --campaign-navy: 210 100% 20%;
-    --campaign-green: 150 100% 40%;
-    --campaign-light: 210 30% 97%;
+    --campaign-navy: 195 100% 12%;
+    --campaign-green: 163 100% 38%;
+    --campaign-light: 195 30% 97%;
     
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(210 100% 20% / 0.95), hsl(210 100% 15% / 0.9));
-    --gradient-green: linear-gradient(135deg, hsl(150 100% 40%), hsl(150 100% 35%));
+    --gradient-hero: linear-gradient(135deg, hsl(195 100% 12% / 0.95), hsl(195 100% 8% / 0.9));
+    --gradient-green: linear-gradient(135deg, hsl(163 100% 38%), hsl(163 100% 32%));
     
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(210 100% 20% / 0.1);
-    --shadow-card: 0 8px 30px -8px hsl(210 100% 20% / 0.15);
-    --shadow-navbar: 0 2px 20px 0 hsl(210 100% 20% / 0.08);
+    --shadow-soft: 0 4px 20px -4px hsl(195 100% 12% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(195 100% 12% / 0.15);
+    --shadow-navbar: 0 2px 20px 0 hsl(195 100% 12% / 0.08);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
