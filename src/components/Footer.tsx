@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { Facebook, Instagram, Mail, MapPin } from 'lucide-react';
+import logoLight from '@/assets/logos/continuons-ensemble-light.svg';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,9 +11,11 @@ const Footer = () => {
         <div className="grid gap-8 md:grid-cols-3 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="font-heading text-2xl font-bold mb-4">
-              Continuons Ensemble
-            </h3>
+            <img 
+              src={logoLight} 
+              alt="Continuons Ensemble" 
+              className="h-12 w-auto mb-4"
+            />
             <p className="text-primary-foreground/80 leading-relaxed">
               Avec Yannick Vacher, continuons à construire l'avenir de notre commune.
             </p>

@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Facebook, Instagram } from 'lucide-react';
+import logoLight from '@/assets/logos/continuons-ensemble-light.svg';
+import logoDark from '@/assets/logos/continons-ensemble-dark.svg';
 
 const navLinks = [
   { name: 'Accueil', href: '#hero' },
@@ -47,12 +49,14 @@ const Navbar = () => {
             {/* Logo */}
             <motion.button
               onClick={() => scrollToSection('#hero')}
-              className={`font-heading font-bold text-lg md:text-xl transition-colors duration-300 ${
-                isScrolled ? 'text-primary' : 'text-primary-foreground'
-              }`}
+              className="transition-all duration-300"
               whileHover={{ scale: 1.02 }}
             >
-              Continuons <span className="text-secondary">Ensemble</span>
+              <img 
+                src={isScrolled ? logoDark : logoLight} 
+                alt="Continuons Ensemble" 
+                className="h-8 md:h-10 w-auto"
+              />
             </motion.button>
 
             {/* Desktop Navigation */}
