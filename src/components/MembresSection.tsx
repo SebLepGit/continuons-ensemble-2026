@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import yannickvacher from '@/assets/yannick-vacher-portrait.png';
 import jeanpierrereynier from '@/assets/portraits/jeanpierre-reynier-portrait.png';
 import mauricefavre from '@/assets/portraits/maurice-favre-portrait.png';
@@ -8,12 +8,11 @@ import josettegombert from '@/assets/portraits/josette-gombert-portrait.png';
 import joelbroutin from '@/assets/portraits/joel-broutin-portrait.png';
 import moniquedutraive from '@/assets/portraits/monique-dutraive-portrait.png';
 import fredericmeunier from '@/assets/portraits/frederic-meunier-portrait.png';
-import logoWatermark from '@/assets/logos/continuons-ensemble-light.svg';
 
 interface Member {
   name: string;
   profession: string;
-  verbatim: string;
+  engagement: string;
   photo?: string;
 }
 
@@ -21,168 +20,164 @@ const members: Member[] = [
   { 
     name: "Yannick Vacher", 
     profession: "Maire sortant", 
-    verbatim: "Continuer à servir notre commune avec passion et détermination.",
+    engagement: "Continuer à servir notre commune avec passion et détermination pour les 6 prochaines années.",
     photo: yannickvacher
   },
   { 
     name: "Monique Dutraive", 
     profession: "", 
-    verbatim: "",
-    photo: moniquedutraive
+    engagement: "",
+      photo: moniquedutraive
   },
   { 
     name: "Jean-Pierre Reynier", 
     profession: "", 
-    verbatim: "",
-    photo: jeanpierrereynier
+    engagement: "",
+      photo: jeanpierrereynier
   },
   { 
     name: "Perrine Janin", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Joël Broutin", 
     profession: "", 
-    verbatim: "",
-    photo: joelbroutin
+    engagement: "",
+      photo: joelbroutin
   },
   { 
     name: "Pascale Romani", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Maurice Favre", 
     profession: "", 
-    verbatim: "",
-    photo: mauricefavre
+    engagement: "",
+      photo: mauricefavre
   },
   { 
     name: "Vanina Depardon", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Frédéric Meunier", 
     profession: "", 
-    verbatim: "",
-    photo: fredericmeunier
+    engagement: "",
+      photo: fredericmeunier
   },
   { 
     name: "Josette Gombert", 
     profession: "", 
-    verbatim: "",
-    photo: josettegombert
+    engagement: "",
+      photo: josettegombert
   },
   { 
     name: "Raphaël Gaudin", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Catherine Vincent", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Sébastien Lépine", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Andrea Moscicki", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Joaquin Fernandez", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Annie Rochet", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Marc Dupuy", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Andrée Defnet", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
   { 
     name: "Jean-Pierre Large", 
     profession: "", 
-    verbatim: ""
+    engagement: ""
   },
 ];
 
 const MemberCard = ({ member, index, isInView }: { member: Member; index: number; isInView: boolean }) => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: 0.05 * index }}
-      className="group relative"
+      transition={{ duration: 0.5, delay: 0.08 * index }}
+      className="group relative cursor-pointer"
+      onMouseEnter={() => setIsActive(true)}
+      onMouseLeave={() => setIsActive(false)}
+      onClick={() => setIsActive(!isActive)}
     >
-      <div className="bg-card rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 hover:-translate-y-1">
-        {/* Photo or Initials */}
-        <div className="relative aspect-square overflow-hidden">
-          {member.photo ? (
-            <img 
-              src={member.photo} 
-              alt={`Portrait de ${member.name}`}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          ) : (
-            <div className="w-full h-full bg-gradient-to-br from-primary via-primary/80 to-secondary/60 flex items-center justify-center relative">
-              <span className="text-4xl md:text-5xl font-heading font-bold text-primary-foreground/90 z-10">
-                {member.name.split(' ').map(n => n[0]).join('')}
-              </span>
-              {/* Subtle pattern overlay */}
-              <div className="absolute inset-0 opacity-10">
-                <div className="absolute inset-0" style={{
-                  backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
-                  backgroundSize: '24px 24px'
-                }} />
-              </div>
-            </div>
-          )}
-        </div>
-
-        {/* Content */}
-        <div className="p-5 relative">
-          {/* Logo watermark */}
+      {/* Card Container - Instagram-like aspect ratio (4:5) */}
+      <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-soft group-hover:shadow-card transition-shadow duration-300">
+        {/* Background Image or Initials */}
+        {member.photo ? (
           <img 
-            src={logoWatermark} 
-            alt="" 
-            className="absolute top-3 right-3 h-6 w-auto opacity-10"
+            src={member.photo} 
+            alt={`Portrait de ${member.name}`}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
-          
-          {/* Name */}
-          <h3 className="font-heading font-semibold text-lg text-primary mb-1">
+        ) : (
+          <div className="w-full h-full bg-gradient-to-br from-primary via-primary/90 to-primary/70 flex items-center justify-center">
+            <span className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground/90">
+              {member.name.split(' ').map(n => n[0]).join('')}
+            </span>
+          </div>
+        )}
+        
+        {/* Name always visible at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4 pt-12">
+          <h3 className="font-heading font-semibold text-base md:text-lg text-white">
             {member.name}
           </h3>
-          
-          {/* Profession */}
-          {member.profession && (
-            <p className="text-sm text-secondary font-medium mb-3">
-              {member.profession}
-            </p>
-          )}
-          
-          {/* Verbatim */}
-          {member.verbatim && (
-            <p className="text-sm text-muted-foreground italic leading-relaxed">
-              "{member.verbatim}"
-            </p>
-          )}
+          <p className="text-sm text-secondary font-medium">
+            {member.profession}
+          </p>
         </div>
+
+        {/* Overlay on hover/click with blur effect */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isActive ? 1 : 0 }}
+          transition={{ duration: 0.3 }}
+          className="absolute inset-0 backdrop-blur-sm bg-primary/80 flex flex-col justify-end p-4 md:p-5"
+        >
+          <h3 className="font-heading font-semibold text-lg md:text-xl text-primary-foreground mb-1">
+            {member.name}
+          </h3>
+          <p className="text-sm md:text-base text-secondary font-semibold mb-3">
+            {member.profession}
+          </p>
+          <p className="text-sm md:text-base text-primary-foreground/90 leading-relaxed">
+            "{member.engagement}"
+          </p>
+        </motion.div>
       </div>
     </motion.div>
   );
