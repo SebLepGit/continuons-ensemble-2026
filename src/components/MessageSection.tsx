@@ -18,48 +18,23 @@ const MessageSection = () => {
           className="max-w-5xl mx-auto"
         >
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Portrait du maire - Style carte */}
+            {/* Portrait du maire */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex-shrink-0"
             >
-              <div className="relative bg-primary rounded-2xl p-6 pb-4 shadow-card">
-                {/* Decorative elements */}
-                <div className="absolute top-4 left-1/2 -translate-x-1/2 flex items-center gap-1">
-                  <div className="w-2 h-2 rounded-full bg-secondary" />
-                  <div className="w-1 h-1 rounded-full bg-secondary/60" />
-                  <div className="w-3 h-3 rounded-full border-2 border-secondary flex items-center justify-center">
-                    <div className="w-1 h-1 rounded-full bg-secondary" />
-                  </div>
-                  <div className="w-1 h-1 rounded-full bg-secondary/60" />
-                  <div className="w-2 h-2 rounded-full bg-secondary" />
+              <div className="relative">
+                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary shadow-card">
+                  <img 
+                    src={mairePortrait} 
+                    alt="Yannick Vacher, Maire de Romanèche-Thorins"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-                
-                {/* Photo circulaire */}
-                <div className="mt-4 relative">
-                  <div className="w-48 h-48 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full overflow-hidden border-4 border-secondary mx-auto">
-                    <img 
-                      src={mairePortrait} 
-                      alt="Yannick Vacher, Maire de Romanèche-Thorins"
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
-                </div>
-                
-                {/* Nom et badge */}
-                <div className="text-center mt-4">
-                  <h3 className="font-heading text-xl md:text-2xl text-primary-foreground italic">
-                    Yannick Vacher
-                  </h3>
-                  <div className="mt-2 inline-block bg-secondary text-secondary-foreground px-6 py-1.5 rounded-full text-sm font-semibold">
-                    Votre Maire
-                  </div>
-                </div>
-                
-                {/* Bottom decorative bar */}
-                <div className="mt-4 h-1.5 bg-secondary rounded-full" />
+                {/* Decorative ring */}
+                <div className="absolute -inset-2 rounded-full border-2 border-primary/20 -z-10" />
               </div>
             </motion.div>
 
