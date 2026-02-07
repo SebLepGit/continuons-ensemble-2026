@@ -186,14 +186,27 @@ const MemberCard = ({ member, index, isInView, onClick }: MemberCardProps) => {
           )}
         </div>
 
-        {/* Hover overlay */}
+        {/* Hover overlay with engagement */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: isHovered ? 1 : 0 }}
           transition={{ duration: 0.3 }}
-          className="absolute inset-0 bg-primary/60 flex items-center justify-center"
+          className="absolute inset-0 backdrop-blur-sm bg-primary/80 flex flex-col justify-end p-4 md:p-5"
         >
-          <span className="text-primary-foreground font-semibold text-lg">Voir le profil</span>
+          <h3 className="font-heading font-semibold text-lg md:text-xl text-primary-foreground mb-1">
+            {member.name}
+          </h3>
+          {member.profession && (
+            <p className="text-sm md:text-base text-secondary font-semibold mb-3">
+              {member.profession}
+            </p>
+          )}
+          {member.engagement && (
+            <p className="text-sm md:text-base text-primary-foreground/90 leading-relaxed mb-3">
+              "{member.engagement}"
+            </p>
+          )}
+          <span className="text-secondary font-semibold text-sm mt-auto">Voir la présentation →</span>
         </motion.div>
       </div>
     </motion.div>
@@ -211,7 +224,7 @@ const MemberModal = ({ member, isOpen, onClose }: MemberModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0 border-none">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0 border-none [&>button]:text-white [&>button]:hover:text-white/80 [&>button]:bg-black/40 [&>button]:rounded-full [&>button]:p-1.5">
         <motion.div
           initial={{ opacity: 0, scale: 0.9, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -225,14 +238,14 @@ const MemberModal = ({ member, isOpen, onClose }: MemberModalProps) => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.2, duration: 0.5 }}
-                className="relative h-64 md:h-80 overflow-hidden"
+                className="relative aspect-[4/5] max-h-[50vh] overflow-hidden"
               >
                 <img 
                   src={member.photo} 
                   alt={`Portrait de ${member.name}`}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-contain bg-primary/5"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent" />
               </motion.div>
             ) : (
               <div className="h-48 bg-gradient-to-br from-primary via-primary/90 to-primary/70 flex items-center justify-center">
