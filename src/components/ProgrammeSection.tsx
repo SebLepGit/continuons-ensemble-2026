@@ -40,6 +40,30 @@ const programItems = [
     description: "Renforcer la police municipale, améliorer l'éclairage public, installer des dispositifs de vidéoprotection et créer des actions de prévention.",
     animation: "up",
   },
+    {
+        icon: Shield,
+        title: "Sécurité & Tranquillité",
+        description: "Renforcer la police municipale, améliorer l'éclairage public, installer des dispositifs de vidéoprotection et créer des actions de prévention.",
+        animation: "up",
+    },
+    {
+        icon: Shield,
+        title: "Sécurité & Tranquillité",
+        description: "Renforcer la police municipale, améliorer l'éclairage public, installer des dispositifs de vidéoprotection et créer des actions de prévention.",
+        animation: "up",
+    },
+    {
+        icon: Shield,
+        title: "Sécurité & Tranquillité",
+        description: "Renforcer la police municipale, améliorer l'éclairage public, installer des dispositifs de vidéoprotection et créer des actions de prévention.",
+        animation: "up",
+    },
+    {
+        icon: Shield,
+        title: "Sécurité & Tranquillité",
+        description: "Renforcer la police municipale, améliorer l'éclairage public, installer des dispositifs de vidéoprotection et créer des actions de prévention.",
+        animation: "up",
+    },
 ];
 
 const ProgrammeSection = () => {
@@ -84,7 +108,7 @@ const ProgrammeSection = () => {
             Notre Programme
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            5 axes prioritaires pour continuer à construire l'avenir de notre commune
+            9 axes prioritaires pour continuer à construire l'avenir de notre commune
           </p>
         </motion.div>
 

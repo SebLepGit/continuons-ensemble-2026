@@ -79,7 +79,7 @@ const MessageSection = () => {
                   Yannick Vacher
                 </p>
                 <p className="text-muted-foreground">
-                  Votre Maire sortant
+                   Maire sortant
                 </p>
               </motion.div>
             </div>

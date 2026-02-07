@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-12 md:py-16">
       <div className="container-campaign mx-auto px-4">
-        <div className="grid gap-8 md:grid-cols-3 mb-12">
+        <div className="grid gap-8 md:grid-cols-2 mb-12">
           {/* Brand */}
           <div>
             <img 
@@ -17,28 +17,14 @@ const Footer = () => {
               className="h-16 w-auto mb-4"
             />
             <p className="text-primary-foreground/80 leading-relaxed">
-              Continuons à construire l'avenir de notre commune
+                "Continuons ensemble à construire l'avenir de notre commune"
             </p>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Contact</h4>
-            <div className="space-y-3">
-              <a
-                href="mailto:contact@continuons-ensemble.fr"
-                className="flex items-center gap-3 text-primary-foreground/80 hover:text-secondary transition-colors"
-              >
-                <Mail size={18} />
-                <span>contact@continuons-ensemble.fr</span>
-              </a>
-            </div>
           </div>
 
           {/* Social */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4">Suivez-nous</h4>
-            <div className="flex gap-4">
+            <h4 className="font-heading font-semibold text-lg mb-4 text-end">Suivez-nous</h4>
+            <div className="flex gap-4 flex-row-reverse">
               <motion.a
                 href="https://facebook.com"
                 target="_blank"
