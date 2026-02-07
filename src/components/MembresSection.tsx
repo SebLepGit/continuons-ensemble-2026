@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
+import MemberAvatar from './MemberAvatar';
 import yannickvacher from '@/assets/yannick-vacher-portrait.png';
 import jeanpierrereynier from '@/assets/portraits/jeanpierre-reynier-portrait.png';
 import mauricefavre from '@/assets/portraits/maurice-favre-portrait.png';
@@ -12,7 +13,6 @@ import fredericmeunier from '@/assets/portraits/frederic-meunier-portrait.png';
 interface Member {
   name: string;
   profession: string;
-  engagement: string;
   photo?: string;
 }
 
@@ -20,168 +20,87 @@ const members: Member[] = [
   { 
     name: "Yannick Vacher", 
     profession: "Maire sortant", 
-    engagement: "Continuer à servir notre commune avec passion et détermination pour les 6 prochaines années.",
     photo: yannickvacher
   },
   { 
     name: "Monique Dutraive", 
-    profession: "", 
-    engagement: "",
-      photo: moniquedutraive
+    profession: "",
+    photo: moniquedutraive
   },
   { 
     name: "Jean-Pierre Reynier", 
-    profession: "", 
-    engagement: "",
-      photo: jeanpierrereynier
+    profession: "",
+    photo: jeanpierrereynier
   },
   { 
     name: "Perrine Janin", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Joël Broutin", 
-    profession: "", 
-    engagement: "",
-      photo: joelbroutin
+    profession: "",
+    photo: joelbroutin
   },
   { 
     name: "Pascale Romani", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Maurice Favre", 
-    profession: "", 
-    engagement: "",
-      photo: mauricefavre
+    profession: "",
+    photo: mauricefavre
   },
   { 
     name: "Vanina Depardon", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Frédéric Meunier", 
-    profession: "", 
-    engagement: "",
-      photo: fredericmeunier
+    profession: "",
+    photo: fredericmeunier
   },
   { 
     name: "Josette Gombert", 
-    profession: "", 
-    engagement: "",
-      photo: josettegombert
+    profession: "",
+    photo: josettegombert
   },
   { 
     name: "Raphaël Gaudin", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Catherine Vincent", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Sébastien Lépine", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Andrea Moscicki", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Joaquin Fernandez", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Annie Rochet", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Marc Dupuy", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Andrée Defnet", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
   { 
     name: "Jean-Pierre Large", 
-    profession: "", 
-    engagement: ""
+    profession: ""
   },
 ];
-
-const MemberCard = ({ member, index, isInView }: { member: Member; index: number; isInView: boolean }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.5, delay: 0.08 * index }}
-      className="group relative cursor-pointer"
-      onMouseEnter={() => setIsActive(true)}
-      onMouseLeave={() => setIsActive(false)}
-      onClick={() => setIsActive(!isActive)}
-    >
-      {/* Card Container - Instagram-like aspect ratio (4:5) */}
-      <div className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-soft group-hover:shadow-card transition-shadow duration-300">
-        {/* Background Image or Initials */}
-        {member.photo ? (
-          <img 
-            src={member.photo} 
-            alt={`Portrait de ${member.name}`}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-          />
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-primary via-primary/90 to-primary/70 flex items-center justify-center">
-            <span className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-primary-foreground/90">
-              {member.name.split(' ').map(n => n[0]).join('')}
-            </span>
-          </div>
-        )}
-        
-        {/* Name always visible at bottom */}
-        <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4 pt-12">
-          <h3 className="font-heading font-semibold text-base md:text-lg text-white">
-            {member.name}
-          </h3>
-          <p className="text-sm text-secondary font-medium">
-            {member.profession}
-          </p>
-        </div>
-
-        {/* Overlay on hover/click with blur effect */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isActive ? 1 : 0 }}
-          transition={{ duration: 0.3 }}
-          className="absolute inset-0 backdrop-blur-sm bg-primary/80 flex flex-col justify-end p-4 md:p-5"
-        >
-          <h3 className="font-heading font-semibold text-lg md:text-xl text-primary-foreground mb-1">
-            {member.name}
-          </h3>
-          <p className="text-sm md:text-base text-secondary font-semibold mb-3">
-            {member.profession}
-          </p>
-          <p className="text-sm md:text-base text-primary-foreground/90 leading-relaxed">
-            "{member.engagement}"
-          </p>
-        </motion.div>
-      </div>
-    </motion.div>
-  );
-};
 
 const MembresSection = () => {
   const ref = useRef(null);
@@ -204,15 +123,22 @@ const MembresSection = () => {
           </p>
         </motion.div>
 
-        {/* Grid: 2 columns mobile, 3 tablet, 4 desktop */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 lg:gap-8 max-w-6xl mx-auto">
+        {/* Grid: responsive layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 md:gap-8 lg:gap-10 max-w-7xl mx-auto justify-items-center">
           {members.map((member, index) => (
-            <MemberCard 
-              key={index} 
-              member={member} 
-              index={index} 
-              isInView={isInView} 
-            />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.05 * index }}
+            >
+              <MemberAvatar 
+                name={member.name}
+                profession={member.profession}
+                photo={member.photo}
+                size="md"
+              />
+            </motion.div>
           ))}
         </div>
       </div>
