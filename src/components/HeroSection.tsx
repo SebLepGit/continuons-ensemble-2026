@@ -59,9 +59,12 @@ const HeroSection = () => {
             className="h-32 md:h-48 lg:h-56 w-auto mx-auto mb-4"
           />
           
-          <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide mb-8">
+          <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide">
             Élection municipale 2026
           </p>
+            <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide mb-8">
+                Romanèche-Thorins
+            </p>
 
           <a
             href="https://www.service-public.fr/particuliers/vosdroits/R16396"
