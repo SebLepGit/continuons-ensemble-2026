@@ -25,10 +25,10 @@ const MessageSection = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex-shrink-0 flex flex-col items-center"
             >
-              <div className="relative">
-                {/* Cercle bleu extérieur avec marge de 15px */}
-                <div className="w-52 h-52 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-4 border-primary flex items-center justify-center">
-                  {/* Photo en cercle */}
+              <div className="relative pb-8">
+                {/* Cercle bleu extérieur avec marge réduite (8px) */}
+                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-primary flex items-center justify-center">
+                  {/* Photo en cercle - marge réduite */}
                   <div className="w-44 h-44 md:w-60 md:h-60 lg:w-68 lg:h-68 rounded-full overflow-hidden">
                     <img 
                       src={mairePortrait} 
@@ -45,20 +45,23 @@ const MessageSection = () => {
                     <path d="M12 2v2M12 14v2M8 8H6M18 8h-2" />
                   </svg>
                 </div>
-              </div>
-              
-              {/* Cadre nom - fond transparent avec bordure */}
-              <div className="mt-4 px-8 py-2 border-2 border-primary rounded-lg bg-transparent">
-                <p className="font-heading text-xl md:text-2xl text-primary italic">
-                  Yannick VACHER
-                </p>
-              </div>
-              
-              {/* Cadre fonction - fond bleu */}
-              <div className="mt-2 px-6 py-1.5 bg-primary rounded-md">
-                <p className="text-sm md:text-base text-primary-foreground font-medium">
-                  Votre Maire sortant
-                </p>
+                
+                {/* Cadres nom et fonction - remontés sous le cercle */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center">
+                  {/* Cadre nom - fond transparent avec bordure */}
+                  <div className="px-6 py-1.5 border-2 border-primary rounded-t-lg bg-background">
+                    <p className="font-heading text-lg md:text-xl text-primary italic whitespace-nowrap">
+                      Yannick VACHER
+                    </p>
+                  </div>
+                  
+                  {/* Cadre fonction - fond bleu, collé au cadre du nom */}
+                  <div className="px-6 py-1 bg-primary rounded-b-md">
+                    <p className="text-xs md:text-sm text-primary-foreground font-medium whitespace-nowrap">
+                      Votre Maire sortant
+                    </p>
+                  </div>
+                </div>
               </div>
             </motion.div>
 
