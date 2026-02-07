@@ -18,50 +18,23 @@ const MessageSection = () => {
           className="max-w-5xl mx-auto"
         >
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
-            {/* Portrait du maire avec design comme l'image de référence */}
+            {/* Portrait du maire */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={isInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex-shrink-0 flex flex-col items-center"
+              className="flex-shrink-0"
             >
-              <div className="relative pb-8">
-                {/* Cercle bleu extérieur avec marge réduite (8px) */}
-                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full border-4 border-primary flex items-center justify-center">
-                  {/* Photo en cercle - marge réduite */}
-                  <div className="w-44 h-44 md:w-60 md:h-60 lg:w-68 lg:h-68 rounded-full overflow-hidden">
-                    <img 
-                      src={mairePortrait} 
-                      alt="Yannick Vacher, Maire de Romanèche-Thorins"
-                      className="w-full h-full object-cover object-top"
-                    />
-                  </div>
+              <div className="relative">
+                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary shadow-card">
+                  <img 
+                    src={mairePortrait} 
+                    alt="Yannick Vacher, Maire de Romanèche-Thorins"
+                    className="w-full h-full object-cover object-top"
+                  />
                 </div>
-                
-                {/* Icône décorative en haut à droite */}
-                <div className="absolute -top-2 -right-2 text-secondary">
-                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <circle cx="12" cy="8" r="4" />
-                    <path d="M12 2v2M12 14v2M8 8H6M18 8h-2" />
-                  </svg>
-                </div>
-                
-                {/* Cadres nom et fonction - remontés sous le cercle */}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center">
-                  {/* Cadre nom - fond transparent avec bordure */}
-                  <div className="px-6 py-1.5 border-2 border-primary rounded-t-lg bg-background">
-                    <p className="font-heading text-lg md:text-xl text-primary italic whitespace-nowrap">
-                      Yannick VACHER
-                    </p>
-                  </div>
-                  
-                  {/* Cadre fonction - fond bleu, collé au cadre du nom */}
-                  <div className="px-6 py-1 bg-primary rounded-b-md">
-                    <p className="text-xs md:text-sm text-primary-foreground font-medium whitespace-nowrap">
-                      Votre Maire sortant
-                    </p>
-                  </div>
-                </div>
+                {/* Decorative ring */}
+                <div className="absolute -inset-2 rounded-full border-2 border-primary/20 -z-10" />
               </div>
             </motion.div>
 
@@ -96,6 +69,19 @@ const MessageSection = () => {
                 </p>
               </div>
               
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={isInView ? { opacity: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="mt-8"
+              >
+                <p className="font-heading font-semibold text-xl text-primary">
+                  Yannick Vacher
+                </p>
+                <p className="text-muted-foreground">
+                  Votre Maire sortant
+                </p>
+              </motion.div>
             </div>
           </div>
         </motion.div>
