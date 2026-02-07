@@ -224,50 +224,44 @@ const MemberModal = ({ member, isOpen, onClose }: MemberModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-0 gap-0 border-none [&>button]:text-white [&>button]:hover:text-white/80 [&>button]:bg-black/40 [&>button]:rounded-full [&>button]:p-1.5">
+      <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto p-6 md:p-8 bg-background border-border">
         <motion.div
-          initial={{ opacity: 0, scale: 0.9, y: 20 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          exit={{ opacity: 0, scale: 0.9, y: 20 }}
-          transition={{ duration: 0.4, ease: "easeOut" }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="flex flex-col lg:flex-row gap-6 lg:gap-10"
         >
-          {/* Header with photo */}
-          <div className="relative">
-            {member.photo ? (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.2, duration: 0.5 }}
-                className="relative aspect-[4/5] max-h-[50vh] overflow-hidden"
-              >
-                <img 
-                  src={member.photo} 
-                  alt={`Portrait de ${member.name}`}
-                  className="w-full h-full object-contain bg-primary/5"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent" />
-              </motion.div>
-            ) : (
-              <div className="h-48 bg-gradient-to-br from-primary via-primary/90 to-primary/70 flex items-center justify-center">
-                <motion.span 
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  transition={{ delay: 0.3, type: "spring", stiffness: 200 }}
-                  className="text-7xl font-heading font-bold text-primary-foreground/90"
-                >
-                  {member.name.split(' ').map(n => n[0]).join('')}
-                </motion.span>
-              </div>
-            )}
-            
-            {/* Name overlay */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3, duration: 0.4 }}
-              className="absolute bottom-0 left-0 right-0 p-6"
-            >
-              <h2 className="font-heading text-2xl md:text-3xl font-bold text-white">
+          {/* Left side - Photo and info */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.1, duration: 0.4 }}
+            className="flex-shrink-0 text-center lg:text-left"
+          >
+            {/* Photo */}
+            <div className="relative inline-block">
+              {member.photo ? (
+                <div className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-card mx-auto lg:mx-0">
+                  <img 
+                    src={member.photo} 
+                    alt={`Portrait de ${member.name}`}
+                    className="w-full h-full object-cover object-top"
+                  />
+                </div>
+              ) : (
+                <div className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full bg-gradient-to-br from-primary via-primary/90 to-primary/70 flex items-center justify-center border-4 border-secondary shadow-card mx-auto lg:mx-0">
+                  <span className="text-5xl md:text-6xl font-heading font-bold text-primary-foreground/90">
+                    {member.name.split(' ').map(n => n[0]).join('')}
+                  </span>
+                </div>
+              )}
+              {/* Decorative ring */}
+              <div className="absolute -inset-2 rounded-full border-2 border-primary/20 -z-10" />
+            </div>
+
+            {/* Name and profession */}
+            <div className="mt-6">
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-primary">
                 {member.name}
               </h2>
               {member.profession && (
@@ -275,31 +269,38 @@ const MemberModal = ({ member, isOpen, onClose }: MemberModalProps) => {
                   {member.profession}
                 </p>
               )}
-            </motion.div>
-          </div>
+            </div>
 
-          {/* Content */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.4 }}
-            className="p-6 bg-background"
+            {/* Engagement quote */}
+            {member.engagement && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.3, duration: 0.4 }}
+                className="mt-4 max-w-xs mx-auto lg:mx-0"
+              >
+                <blockquote className="border-l-4 border-secondary pl-4 italic text-muted-foreground text-sm">
+                  "{member.engagement}"
+                </blockquote>
+              </motion.div>
+            )}
+          </motion.div>
+
+          {/* Right side - Bio */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 0.2, duration: 0.4 }}
+            className="flex-1"
           >
             {member.bio ? (
               <div className="prose prose-lg max-w-none">
-                <blockquote className="border-l-4 border-secondary pl-4 italic text-muted-foreground">
-                  "{member.engagement}"
-                </blockquote>
-                <div className="mt-6 space-y-4 text-foreground leading-relaxed whitespace-pre-line">
+                <div className="text-foreground leading-relaxed whitespace-pre-line">
                   {member.bio}
                 </div>
               </div>
-            ) : member.engagement ? (
-              <blockquote className="border-l-4 border-secondary pl-4 italic text-muted-foreground text-lg">
-                "{member.engagement}"
-              </blockquote>
             ) : (
-              <p className="text-muted-foreground italic">
+              <p className="text-muted-foreground italic text-center lg:text-left">
                 Biographie à venir...
               </p>
             )}
