@@ -255,8 +255,6 @@ const MemberModal = ({ member, isOpen, onClose }: MemberModalProps) => {
                   </span>
                 </div>
               )}
-              {/* Decorative ring */}
-              <div className="absolute -inset-2 rounded-full border-2 border-primary/20 -z-10" />
             </div>
 
             {/* Name and profession */}
