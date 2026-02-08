@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Réunion publique', href: '#reunion' },
   { name: 'Presse', href: '#presse' },
   { name: 'Programme', href: '#programme' },
-  { name: 'Membres', href: '#membres' },
+  { name: 'Notre équipe', href: '#membres' },
 ];
 
 const Navbar = () => {

@@ -20,17 +20,18 @@ interface Member {
 }
 
 const members: Member[] = [
-  { 
-    name: "Yannick Vacher", 
-    profession: "Maire sortant", 
-    engagement: "Continuer à servir notre commune avec passion et détermination pour les 6 prochaines années.",
-    photo: yannickvacher
-  },
-  { 
-    name: "Monique Dutraive", 
-    profession: "Retraitée - Assistante de service social", 
-    engagement: "Mettre mes compétences au service de la commune",
-    bio: `J'ai 67 ans, mariée, 3 enfants, retraitée depuis 3 ans.
+    {
+        name: "Yannick Vacher",
+        profession: "Maire sortant",
+        engagement: "Continuer à servir notre commune avec passion et détermination pour les 6 prochaines années.",
+        bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus facilisis, augue non pretium posuere, urna massa cursus risus, vitae suscipit justo mauris non ipsum.`,
+        photo: yannickvacher
+    },
+    {
+        name: "Monique Dutraive",
+        profession: "Retraitée - Assistante de service social",
+        engagement: "Mettre mes compétences au service de la commune",
+        bio: `J'ai 67 ans, mariée, 3 enfants, retraitée depuis 3 ans.
 
 Je suis habitante de Romanèche-Thorins depuis 2013 (quartier du moulin à vent), mais le Beaujolais est ma région d'origine. Étant membre d'une famille de vignerons j'ai vécu à Fleurie jusqu'à mon entrée dans la vie active en 1980.
 
@@ -43,99 +44,41 @@ J'ai une formation d'assistante de service social, profession que j'ai exercée 
 J'ai travaillé pour différents ministères : Armée, Justice, Agriculture. J'ai eu une parenthèse de 2 ans comme conseillère d'orientation au lycée français de Djibouti en Afrique.
 
 Je souhaite continuer de mettre mes compétences au service de la commune, poursuivre et développer les actions engagées pour répondre aux besoins de ses habitants.`,
-    photo: moniquedutraive
-  },
-  { 
-    name: "Jean-Pierre Reynier", 
-    profession: "", 
-    engagement: "",
-    photo: jeanpierrereynier
-  },
-  { 
-    name: "Perrine Janin", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Joël Broutin", 
-    profession: "", 
-    engagement: "",
-    photo: joelbroutin
-  },
-  { 
-    name: "Pascale Romani", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Maurice Favre", 
-    profession: "", 
-    engagement: "",
-    photo: mauricefavre
-  },
-  { 
-    name: "Vanina Depardon", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Frédéric Meunier", 
-    profession: "", 
-    engagement: "",
-    photo: fredericmeunier
-  },
-  { 
-    name: "Josette Gombert", 
-    profession: "", 
-    engagement: "",
-    photo: josettegombert
-  },
-  { 
-    name: "Raphaël Gaudin", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Catherine Vincent", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Sébastien Lépine", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Andrea Moscicki", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Joaquin Fernandez", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Annie Rochet", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Marc Dupuy", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Andrée Defnet", 
-    profession: "", 
-    engagement: ""
-  },
-  { 
-    name: "Jean-Pierre Large", 
-    profession: "", 
-    engagement: ""
-  },
+        photo: moniquedutraive
+    },
+    { name: "Jean-Pierre Reynier", profession: "Lorem ipsum dolor sit amet", engagement: "S'impliquer activement dans la vie communale.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, photo: jeanpierrereynier },
+    { name: "Perrine Janin", profession: "Lorem ipsum dolor sit amet", engagement: "Participer au développement des projets locaux.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.` },
+    { name: "Joël Broutin", profession: "Lorem ipsum dolor sit amet", engagement: "Contribuer à l'amélioration du cadre de vie.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, photo: joelbroutin },
+    { name: "Pascale Romani", profession: "Lorem ipsum dolor sit amet", engagement: "Soutenir les initiatives citoyennes.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Maurice Favre", profession: "Lorem ipsum dolor sit amet", engagement: "Œuvrer pour une commune dynamique.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, photo: mauricefavre },
+    { name: "Vanina Depardon", profession: "Lorem ipsum dolor sit amet", engagement: "Encourager la participation locale.", bio: `51 ans
+Je suis responsable adjointe en logistique dans le vin.
+Je suis arrivée à Romanèche en 2002 pour tenir un commerce jusqu'en 2006 puis je suis revenue en 2018 pour m'y installer.
+Je suis trésorière de l'association Pétanque Romanèchoise
+Je m'engage pour poursuivre les projets en cours et à venir pour améliorer le bien être des habitants de ce village` },
+    { name: "Frédéric Meunier", profession: "Lorem ipsum dolor sit amet", engagement: "S'engager pour des projets durables.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, photo: fredericmeunier },
+    { name: "Josette Gombert", profession: "Lorem ipsum dolor sit amet", engagement: "Mettre son expérience au service des habitants.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.`, photo: josettegombert },
+    { name: "Raphaël Gaudin", profession: "Lorem ipsum dolor sit amet", engagement: "Participer à la vie associative.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Catherine Vincent", profession: "Lorem ipsum dolor sit amet", engagement: "Renforcer la cohésion communale.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Sébastien Lépine", profession: "Lorem ipsum dolor sit amet", engagement: "Apporter des idées nouvelles.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Andrea Moscicki", profession: "Lorem ipsum dolor sit amet", engagement: "S'investir dans les projets de proximité.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Joaquin Fernandez", profession: "Lorem ipsum dolor sit amet", engagement: "Contribuer au dynamisme communal.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Annie Rochet", profession: "Lorem ipsum dolor sit amet", engagement: "Être à l'écoute des habitants.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Marc Dupuy", profession: "Lorem ipsum dolor sit amet", engagement: "Soutenir le développement local.", bio: `Je me nomme Marc DUPUY, je réside dans le quartier des FARGETS depuis quatre ans.
+
+J'ai 66 ans, retraité et ne connaissant que le Maire sortant, j'ai pu apprécier le travail de tous les administrés pendant cette période.
+
+J'ai vu quantités de travaux réalisés et je ne doute pas un instant de la bienveillance de notre Maire pour
+ces habitants.
+
+Appréciant cette nouvelle qualité de vie dans ces paysages, je souhaitais aussi découvrir ses habitants,
+riche de différences et de connaissances sur une région que je ne connaissais pas.
+
+C'est pour cela que je vais participer à cette édifice et cette liste, sans toutefois dénigrer la liste de Monsieur BERGERON fier de pouvoir apporter une part de moi à cette aventure.` },
+    { name: "Andrée Defnet", profession: "Lorem ipsum dolor sit amet", engagement: "Participer aux actions solidaires.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
+    { name: "Jean-Pierre Large", profession: "Lorem ipsum dolor sit amet", engagement: "Mettre ses compétences au service de la commune.", bio: `Lorem ipsum dolor sit amet, consectetur adipiscing elit.` },
 ];
+
 
 interface MemberCardProps {
   member: Member;

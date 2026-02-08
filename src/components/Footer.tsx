@@ -23,8 +23,8 @@ const Footer = () => {
 
           {/* Social */}
           <div>
-            <h4 className="font-heading font-semibold text-lg mb-4 text-end">Suivez-nous</h4>
-            <div className="flex gap-4 flex-row-reverse">
+            <h4 className="font-heading font-semibold text-lg mb-4 md:text-end">Suivez-nous</h4>
+            <div className="flex gap-4 md:flex-row-reverse">
               <motion.a
                 href="https://facebook.com"
                 target="_blank"
