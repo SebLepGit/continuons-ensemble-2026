@@ -2,7 +2,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
-import { X } from 'lucide-react';
+import {Quote, X} from 'lucide-react';
 import yannickvacher from '@/assets/yannick-vacher-portrait.png';
 import jeanpierrereynier from '@/assets/portraits/jeanpierre-reynier-portrait.png';
 import mauricefavre from '@/assets/portraits/maurice-favre-portrait.png';
@@ -234,6 +234,8 @@ const MemberModal = ({ member, isOpen, onClose }: MemberModalProps) => {
             transition={{ delay: 0.2, duration: 0.4 }}
             className="flex-1"
           >
+              <Quote className="w-12 h-12 text-secondary mx-auto lg:mx-0 mb-6 opacity-60" />
+
             {member.bio ? (
               <div className="prose prose-lg max-w-none">
                 <div className="text-foreground leading-relaxed whitespace-pre-line">
