@@ -13,8 +13,8 @@ const HeroSection = () => {
   });
   
   const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
-  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1.1, 1.3]);
-  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.7, 0.9]);
+  const backgroundScale = useTransform(scrollYProgress, [0, 1], [1.0, 1.3]);
+  const overlayOpacity = useTransform(scrollYProgress, [0, 1], [0.6, 0.9]);
   
   const scrollToProgram = () => {
     const element = document.querySelector('#programme');
@@ -46,8 +46,9 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex-1 flex items-center">
-        <motion.div
+          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex-1 flex items-center -translate-y-12 md:-translate-y-24">
+
+          <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -62,14 +63,14 @@ const HeroSection = () => {
           <p className="text-lg md:text-xl text-primary-foreground/80 font-medium tracking-wide mb-8">
             Élection municipale 2026 - Romanèche-Thorins
           </p>
-          <a
+            {/*<a
             href="https://www.service-public.fr/particuliers/vosdroits/R16396"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:scale-105"
           >
             S'inscrire sur les listes électorales
-          </a>
+          </a>*/}
 
         </motion.div>
       </div>
