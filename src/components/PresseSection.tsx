@@ -5,6 +5,8 @@ import { Newspaper, ExternalLink, ChevronLeft, ChevronRight, FileText, Download,
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
+import tract20260210preview from '@/assets/tracts/TRACT-20260210.png';
+import tract20260210 from '@/assets/tracts/TRACT-20260210.pdf';
 
 const pressArticles = [
   {
@@ -29,10 +31,10 @@ const pressArticles = [
 // Pour chaque tract, fournir: title, date, pdfUrl (chemin vers le PDF dans public/), et previewImage (image de prévisualisation)
 const tracts = [
   {
-    title: "Tract de campagne - Continuons Ensemble",
-    date: "Février 2026",
-    pdfUrl: "/tracts/tract-campagne-2026.pdf",
-    previewImage: "/tracts/tract-campagne-2026-preview.jpg",
+    title: "",
+    date: "10 Février 2026",
+    pdfUrl: tract20260210,
+    previewImage: tract20260210preview,
   },
 ];
 
@@ -265,7 +267,7 @@ const PresseSection = () => {
                 </div>
                 <Button
                   size="sm"
-                  className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground"
+                  className="gap-2 bg-secondary hover:bg-secondary/90 text-secondary-foreground mr-8"
                   asChild
                 >
                   <a href={previewTract.pdfUrl} download>

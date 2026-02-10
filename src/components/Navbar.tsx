@@ -8,7 +8,7 @@ const navLinks = [
   { name: 'Accueil', href: '#hero' },
   { name: 'Message', href: '#message' },
   { name: 'Réunion publique', href: '#reunion' },
-  { name: 'Presse', href: '#presse' },
+  { name: 'Actualités & Ressources', href: '#presse' },
   { name: 'Programme', href: '#programme' },
   { name: 'Notre équipe', href: '#membres' },
 ];
@@ -63,7 +63,7 @@ const Navbar = () => {
             </motion.button>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center gap-8">
+            <div className="hidden xl:flex items-center gap-8">
               {navLinks.map((link) => (
                 <button
                   key={link.name}
@@ -104,7 +104,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 transition-colors ${
+              className={`xl:hidden p-2 transition-colors ${
                 isScrolled ? 'text-primary' : 'text-primary-foreground'
               }`}
             >
@@ -121,7 +121,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-background pt-20 lg:hidden"
+            className="fixed inset-0 z-40 bg-background pt-20 xl:hidden"
           >
             <div className="flex flex-col items-center gap-6 p-8">
               {navLinks.map((link, index) => (
