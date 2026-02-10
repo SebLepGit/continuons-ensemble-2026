@@ -15,7 +15,8 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Open Sans', 'sans-serif'],
-        heading: ['Poppins', 'sans-serif']
+        heading: ['Poppins', 'sans-serif'],
+        home: ['Home', 'sans-serif']
       },
       colors: {
         border: "hsl(var(--border))",

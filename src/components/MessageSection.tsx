@@ -75,11 +75,11 @@ const MessageSection = () => {
                 transition={{ duration: 0.5, delay: 0.4 }}
                 className="mt-8"
               >
-                <p className="font-heading font-semibold text-xl text-primary">
+                  <p className="text-muted-foreground">
+                      Maire sortant
+                  </p>
+                <p className="font-home text-4xl text-primary">
                   Yannick Vacher
-                </p>
-                <p className="text-muted-foreground">
-                   Maire sortant
                 </p>
               </motion.div>
             </div>

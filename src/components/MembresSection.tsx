@@ -84,7 +84,7 @@ const MemberCard = ({ member, index, isInView, onClick }: MemberCardProps) => {
         
         {/* Name always visible at bottom */}
         <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent p-4 pt-12">
-          <h3 className="font-heading font-semibold text-base md:text-lg text-white">
+          <h3 className="font-heading text-base font-semibold md:text-lg text-white">
             {member.name}
           </h3>
           {member.profession && (
