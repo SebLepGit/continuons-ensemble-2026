@@ -1,78 +1,58 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Calendar, Clock, MapPin, Users } from 'lucide-react';
 
 const ReunionSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="reunion" className="section-padding bg-background" ref={ref}>
-      <div className="container-campaign mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7 }}
-          className="text-center mb-12"
-        >
-          <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-primary mb-4">
-            Réunion Publique
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Venez nombreux échanger avec notre équipe et découvrir notre programme
-          </p>
-        </motion.div>
+    <section id="reunion" className="py-0" ref={ref}>
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.7 }}
+        className="bg-secondary"
+      >
+        <div className="container-campaign mx-auto px-6 md:px-12 py-10 md:py-14">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* Left: Time & Date */}
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="flex-shrink-0 text-center md:text-left"
+            >
+              <p className="font-heading font-extrabold text-5xl md:text-6xl lg:text-7xl text-white leading-none tracking-tight">
+                19H00
+              </p>
+              <p className="font-heading font-bold text-xl md:text-2xl lg:text-3xl text-white/90 mt-1 tracking-wide uppercase">
+                Mardi 3 Mars
+              </p>
+            </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          animate={isInView ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="max-w-2xl mx-auto"
-        >
-          <div className="bg-card rounded-2xl shadow-card p-8 md:p-12 border border-border">
-            <div className="flex flex-col items-center gap-6">
-              <div className="w-20 h-20 rounded-full bg-secondary/10 flex items-center justify-center">
-                <Users className="w-10 h-10 text-secondary" />
-              </div>
-
-              <div className="text-center space-y-6 w-full">
-                <div className="flex items-center justify-center gap-3 text-foreground">
-                  <Calendar className="w-6 h-6 text-primary" />
-                  <span className="text-xl md:text-2xl font-heading font-semibold">
-                    3 Mars 2025
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-center gap-3 text-foreground">
-                  <Clock className="w-6 h-6 text-primary" />
-                  <span className="text-xl md:text-2xl font-heading font-semibold">
-                    19h00
-                  </span>
-                </div>
-
-                <div className="flex flex-col items-center gap-1 text-foreground">
-                  <div className="flex items-center gap-3">
-                    <MapPin className="w-6 h-6 text-primary" />
-                    <span className="text-xl md:text-2xl font-heading font-semibold">
-                      Salle Benoît Raclet
-                    </span>
-                  </div>
-                  <span className="text-lg text-muted-foreground">
-                    Romanèche-Thorins
-                  </span>
-                </div>
-              </div>
-
-              <div className="w-full pt-6 border-t border-border mt-4">
-                <p className="text-muted-foreground text-center">
-                  Entrée libre • Questions-réponses avec l'équipe
-                </p>
-              </div>
-            </div>
+            {/* Right: Description */}
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              animate={isInView ? { opacity: 1, x: 0 } : {}}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="flex-1 text-center md:text-left"
+            >
+              <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
+                Nous vous donnons rendez-vous dans la{' '}
+                <span className="bg-white/20 px-2 py-0.5 rounded">
+                  salle du Moulin à Vent
+                </span>{' '}
+                pour{' '}
+                <span className="bg-white/20 px-2 py-0.5 rounded">
+                  une réunion publique
+                </span>{' '}
+                de manière à faire plus ample connaissance.
+              </p>
+            </motion.div>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };
