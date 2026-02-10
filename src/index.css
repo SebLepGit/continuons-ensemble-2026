@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* Design system for Continuons Ensemble campaign */
 
 @font-face {
@@ -13,54 +14,53 @@
     font-display: swap;
 }
 
-
 @layer base {
   :root {
     /* Primary - Official Navy Blue #002E3F */
     --primary: 195 100% 12%;
     --primary-foreground: 0 0% 100%;
-    
+
     /* Secondary - Official Green #00C291 */
-    --secondary: 163 100% 38%;
+    --secondary: 159 45% 55%;
     --secondary-foreground: 0 0% 100%;
-    
+
     /* Backgrounds */
     --background: 0 0% 100%;
     --foreground: 195 100% 10%;
-    
+
     /* Cards and surfaces */
     --card: 0 0% 100%;
     --card-foreground: 195 100% 10%;
-    
+
     --popover: 0 0% 100%;
     --popover-foreground: 195 100% 10%;
-    
+
     /* Muted colors */
     --muted: 195 20% 96%;
     --muted-foreground: 195 30% 35%;
-    
+
     /* Accent - Light tint */
     --accent: 195 50% 95%;
     --accent-foreground: 195 100% 12%;
-    
+
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 195 40% 98%;
-    
+
     --border: 195 20% 90%;
     --input: 195 20% 90%;
     --ring: 163 100% 38%;
-    
+
     --radius: 0.75rem;
-    
+
     /* Custom campaign colors */
     --campaign-navy: 195 100% 12%;
     --campaign-green: 163 100% 38%;
     --campaign-light: 195 30% 97%;
-    
+
     /* Gradients */
     --gradient-hero: linear-gradient(135deg, hsl(195 100% 12% / 0.95), hsl(195 100% 8% / 0.9));
     --gradient-green: linear-gradient(135deg, hsl(163 100% 38%), hsl(163 100% 32%));
-    
+
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(195 100% 12% / 0.1);
     --shadow-card: 0 8px 30px -8px hsl(195 100% 12% / 0.15);
@@ -113,12 +113,12 @@
   }
 
   body {
-    @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Open Sans', sans-serif;
+    @apply bg-background text-foreground font-heading antialiased;
+    font-family: 'Poppins', sans-serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     @apply font-bold tracking-tight;
   }
 }
@@ -127,31 +127,31 @@
   .section-padding {
     @apply px-4 py-16 md:px-8 md:py-24 lg:px-16 lg:py-32;
   }
-  
+
   .container-campaign {
     @apply max-w-7xl mx-auto;
   }
-  
+
   .text-gradient {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
   }
-  
+
   .card-hover {
     @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
   }
-  
+
   .btn-primary {
-    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold 
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-full font-semibold
            transition-all duration-300 hover:opacity-90 hover:shadow-lg;
   }
-  
+
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold 
+    @apply bg-secondary text-secondary-foreground px-6 py-3 rounded-full font-semibold
            transition-all duration-300 hover:opacity-90 hover:shadow-lg;
   }
-  
+
   .btn-outline {
-    @apply border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold 
+    @apply border-2 border-primary text-primary px-6 py-3 rounded-full font-semibold
            transition-all duration-300 hover:bg-primary hover:text-primary-foreground;
   }
 }
@@ -160,7 +160,7 @@
   .animate-bounce-slow {
     animation: bounce-slow 2s ease-in-out infinite;
   }
-  
+
   @keyframes bounce-slow {
     0%, 100% {
       transform: translateY(0);

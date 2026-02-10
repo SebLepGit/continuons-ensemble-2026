@@ -48,7 +48,7 @@ const MessageSection = () => {
               
               <div className="prose prose-lg max-w-none text-foreground/80 space-y-4">
                 <p className="text-lg leading-relaxed">
-                  Chers concitoyens et concitoyennes,
+                  Chères concitoyennes, chers concitoyens,
                 </p>
                 
                 <p className="text-base md:text-lg leading-relaxed">
