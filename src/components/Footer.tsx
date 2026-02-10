@@ -16,7 +16,7 @@ const Footer = () => {
               alt="Continuons Ensemble" 
               className="h-16 w-auto mb-4"
             />
-            <p className="text-primary-foreground/80 leading-relaxed">
+            <p className="text-primary-foreground/80 leading-relaxed italic">
                 "Continuons ensemble à construire l'avenir de notre commune"
             </p>
           </div>

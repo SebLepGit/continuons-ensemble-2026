@@ -25,15 +25,18 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-    setIsMobileMenuOpen(false);
-  };
+    const scrollToSection = (href: string) => {
+        const element = document.querySelector(href);
+        if (element) {
+            const yOffset = -80; // hauteur de la navbar
+            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-  return (
+            window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+        setIsMobileMenuOpen(false);
+    };
+
+    return (
     <>
       <motion.nav
         initial={{ y: -100 }}
