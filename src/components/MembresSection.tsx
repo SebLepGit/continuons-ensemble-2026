@@ -108,7 +108,7 @@ Si je souhaite aujourd'hui laisser la place à de nouvelles responsabilités, je
         photo: josettegombert
     },
     {
-        name: "Raphaël Gaudin",
+        name: "Raphael Gaudin",
         profession: "Responsable informatique",
         engagement: "Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.",
         bio: `Habitant de la rue des Garniers depuis 3 ans, j'ai immédiatement été séduit par la convivialité et l'âme de notre village. Pour m'ancrer concrètement dans la vie locale, j'ai rejoint le Comité des Fêtes et je ne manque jamais le rendez-vous annuel des vendanges.
