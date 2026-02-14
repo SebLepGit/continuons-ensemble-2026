@@ -366,7 +366,7 @@ const MembresSection = () => {
     const [selectedMember, setSelectedMember] = useState<Member | null>(null);
 
     return (
-        <section id="membres" className="section-padding bg-muted" ref={ref}>
+        <section id="membres" className="section-padding bg-background" ref={ref}>
             <div className="container-campaign mx-auto">
                 <motion.div
                     initial={{opacity: 0, y: 40}}

@@ -60,7 +60,7 @@ const PresseSection = () => {
   }, []);
 
   return (
-    <section id="presse" className="section-padding bg-muted" ref={ref}>
+    <section id="presse" className="section-padding bg-background" ref={ref}>
       <div className="container-campaign mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
