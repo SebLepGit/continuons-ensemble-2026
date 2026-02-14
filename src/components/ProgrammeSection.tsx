@@ -1,102 +1,126 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 import { 
-  Leaf, 
-  GraduationCap, 
-  HeartHandshake, 
-  Building2, 
-  Shield 
+  Car, 
+  Building, 
+  Users, 
+  TreePine,
+  ChevronDown
 } from 'lucide-react';
 
-const programItems = [
+const programAxes = [
   {
-    icon: Leaf,
-    title: "Transition Écologique",
-    description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-    animation: "left",
+    icon: Car,
+    title: "Circulation & Voirie",
+    items: [
+      "Favorisation des déplacements doux (piétons, vélo)",
+      "Sécurisation des croisements",
+      "Lutte contre la vitesse et l'accidentologie récurrente",
+      "Optimisation des itinéraires poids lourds",
+      "Amélioration de l'éclairage public",
+      "Amélioration de la signalétique touristique",
+      "Réaménagement des quartiers",
+    ],
   },
   {
-    icon: GraduationCap,
-    title: "Éducation & Jeunesse",
-    description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-    animation: "left",
+    icon: Building,
+    title: "Bâtiments & Patrimoine",
+    items: [
+      "Réfection totale de la place Benoit Raclet (création d'îlots de fraîcheur)",
+      "Création d'une halle communale sur la place",
+      "Mise en accessibilité PMR des bâtiments municipaux",
+      "Renforcement de l'isolation thermique des bâtiments",
+      "Changement système de chauffage et régulation thermique",
+    ],
   },
   {
-    icon: HeartHandshake,
-    title: "Solidarité & Seniors",
-    description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-    animation: "left",
+    icon: Users,
+    title: "Services à la Population",
+    items: [
+      "Mise en place d'un budget participatif pour financer des projets citoyens",
+      "Moderniser l'identité numérique de la commune",
+      "Communiquer plus régulièrement sur les réalisations",
+      "Favorisation du commerce de proximité",
+      "Rénovation des installations sportives",
+      "Renforcement du secteur associatif",
+      "Mise à disposition d'une salle pour les cérémonies laïques",
+      "Renforcement de l'offre de transport",
+    ],
   },
   {
-    icon: Building2,
-    title: "Développement Local",
-    description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-    animation: "left",
+    icon: TreePine,
+    title: "Environnement & Embellissement",
+    items: [
+      "Éclairage public, remplacement progressif par des LEDs",
+      "Plantation d'arbres sur la place et la zone de loisir",
+      "Continuer la politique de fleurissement pour obtenir la distinction village fleuri",
+      "Aménagement du clos des mines",
+    ],
   },
-  {
-    icon: Shield,
-    title: "Sécurité & Tranquillité",
-    description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-    animation: "left",
-  },
-    {
-        icon: Shield,
-        title: "Sécurité & Tranquillité",
-        description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-        animation: "left",
-    },
-    {
-        icon: Shield,
-        title: "Sécurité & Tranquillité",
-        description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-        animation: "left",
-    },
-    {
-        icon: Shield,
-        title: "Sécurité & Tranquillité",
-        description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-        animation: "left",
-    },
-    {
-        icon: Shield,
-        title: "Sécurité & Tranquillité",
-        description: "Hae duae provinciae bello quondam piratico catervis mixtae praedonum a Servilio pro consule missae sub iugum factae sunt vectigales. et hae quidem regiones velut in prominenti terrarum lingua positae ob orbe eoo monte Amano disparantur.",
-        animation: "left",
-    },
 ];
+
+const AxeCard = ({ axe, index, isInView }: { axe: typeof programAxes[0]; index: number; isInView: boolean }) => {
+  const [open, setOpen] = useState(false);
+  const Icon = axe.icon;
+  const previewCount = 3;
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.5, delay: 0.15 * index }}
+      className="bg-card rounded-2xl border border-border shadow-soft overflow-hidden hover:shadow-card transition-shadow duration-300"
+    >
+      {/* Header */}
+      <div className="bg-primary p-6 flex items-center gap-4">
+        <div className="w-12 h-12 rounded-xl bg-secondary/20 flex items-center justify-center shrink-0">
+          <Icon className="w-6 h-6 text-secondary" />
+        </div>
+        <h3 className="font-heading font-bold text-xl text-primary-foreground">
+          {axe.title}
+        </h3>
+      </div>
+
+      {/* Items */}
+      <div className="p-6">
+        <ul className="space-y-3">
+          {axe.items.slice(0, open ? axe.items.length : previewCount).map((item, i) => (
+            <motion.li
+              key={i}
+              initial={i >= previewCount ? { opacity: 0, height: 0 } : false}
+              animate={i >= previewCount ? { opacity: 1, height: 'auto' } : undefined}
+              transition={{ duration: 0.3, delay: (i - previewCount) * 0.05 }}
+              className="flex items-start gap-3"
+            >
+              <span className="mt-1.5 w-2 h-2 rounded-full bg-secondary shrink-0" />
+              <span className="text-muted-foreground leading-relaxed text-sm">
+                {item}
+              </span>
+            </motion.li>
+          ))}
+        </ul>
+
+        {axe.items.length > previewCount && (
+          <button
+            onClick={() => setOpen(!open)}
+            className="mt-4 flex items-center gap-1.5 text-secondary font-medium text-sm hover:opacity-80 transition-opacity"
+          >
+            {open ? 'Voir moins' : `Voir les ${axe.items.length - previewCount} autres points`}
+            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
+          </button>
+        )}
+      </div>
+    </motion.div>
+  );
+};
 
 const ProgrammeSection = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-50px" });
 
-  const getAnimationProps = (animation: string, index: number) => {
-    const delay = 0.15 * index;
-    
-    switch (animation) {
-      case "left":
-        return {
-          initial: { opacity: 0, x: -50 },
-          animate: isInView ? { opacity: 1, x: 0 } : {},
-          transition: { duration: 0.6, delay },
-        };
-      case "right":
-        return {
-          initial: { opacity: 0, x: 50 },
-          animate: isInView ? { opacity: 1, x: 0 } : {},
-          transition: { duration: 0.6, delay },
-        };
-      default:
-        return {
-          initial: { opacity: 0, y: 40 },
-          animate: isInView ? { opacity: 1, y: 0 } : {},
-          transition: { duration: 0.6, delay },
-        };
-    }
-  };
-
   return (
-    <section id="programme" className="section-padding bg-background" ref={ref}>
+    <section id="programme" className="section-padding bg-muted" ref={ref}>
       <div className="container-campaign mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -108,35 +132,14 @@ const ProgrammeSection = () => {
             Notre Programme
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            9 axes prioritaires pour continuer à construire l'avenir de notre commune
+            4 axes prioritaires pour continuer à construire l'avenir de notre commune
           </p>
         </motion.div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-          {programItems.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <motion.div
-                key={index}
-                {...getAnimationProps(item.animation, index)}
-                className={`bg-card rounded-2xl p-8 shadow-soft border border-border hover:shadow-card hover:-translate-y-1 transition-all duration-300 ${
-                  index === 4 ? 'md:col-span-2 lg:col-span-1 lg:col-start-2' : ''
-                }`}
-              >
-                <div className="w-14 h-14 rounded-xl bg-secondary/10 flex items-center justify-center mb-6">
-                  <Icon className="w-7 h-7 text-secondary" />
-                </div>
-                
-                <h3 className="font-heading font-bold text-xl text-primary mb-4">
-                  {item.title}
-                </h3>
-                
-                <p className="text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
-              </motion.div>
-            );
-          })}
+        <div className="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+          {programAxes.map((axe, index) => (
+            <AxeCard key={index} axe={axe} index={index} isInView={isInView} />
+          ))}
         </div>
       </div>
     </section>
