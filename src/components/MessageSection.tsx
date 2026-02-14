@@ -9,7 +9,7 @@ const MessageSection = () => {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="message" className="section-padding bg-muted" ref={ref}>
+    <section id="message" className="section-padding bg-background" ref={ref}>
       <div className="container-campaign mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

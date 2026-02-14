@@ -1,12 +1,11 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { 
   Car, 
   Building, 
   Users, 
-  TreePine,
-  ChevronDown
+  TreePine
 } from 'lucide-react';
 
 const programAxes = [
@@ -61,9 +60,7 @@ const programAxes = [
 ];
 
 const AxeCard = ({ axe, index, isInView }: { axe: typeof programAxes[0]; index: number; isInView: boolean }) => {
-  const [open, setOpen] = useState(false);
   const Icon = axe.icon;
-  const previewCount = 3;
 
   return (
     <motion.div
@@ -85,31 +82,18 @@ const AxeCard = ({ axe, index, isInView }: { axe: typeof programAxes[0]; index: 
       {/* Items */}
       <div className="p-6">
         <ul className="space-y-3">
-          {axe.items.slice(0, open ? axe.items.length : previewCount).map((item, i) => (
-            <motion.li
+          {axe.items.map((item, i) => (
+            <li
               key={i}
-              initial={i >= previewCount ? { opacity: 0, height: 0 } : false}
-              animate={i >= previewCount ? { opacity: 1, height: 'auto' } : undefined}
-              transition={{ duration: 0.3, delay: (i - previewCount) * 0.05 }}
               className="flex items-start gap-3"
             >
               <span className="mt-1.5 w-2 h-2 rounded-full bg-secondary shrink-0" />
               <span className="text-muted-foreground leading-relaxed text-sm">
                 {item}
               </span>
-            </motion.li>
+            </li>
           ))}
         </ul>
-
-        {axe.items.length > previewCount && (
-          <button
-            onClick={() => setOpen(!open)}
-            className="mt-4 flex items-center gap-1.5 text-secondary font-medium text-sm hover:opacity-80 transition-opacity"
-          >
-            {open ? 'Voir moins' : `Voir les ${axe.items.length - previewCount} autres points`}
-            <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${open ? 'rotate-180' : ''}`} />
-          </button>
-        )}
       </div>
     </motion.div>
   );
