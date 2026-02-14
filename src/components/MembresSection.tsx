@@ -26,156 +26,218 @@ const bioEnCours = "Biographie en cours de rédaction.";
 const members: Member[] = [
     {
         name: "Yannick Vacher",
-        profession: "Retraité (Finance & Conseil) / Maire sortant",
+        profession: "Retraité - Finance & Conseil",
         engagement: "Avec rigueur et envie intacte, je sollicite votre confiance pour finaliser nos projets et continuer à améliorer notre qualité de vie.",
-        bio: `Romanéchois depuis 28 ans, j'ai choisi en 2020 de mettre mon expérience au service de notre collectivité après une carrière exigeante dans la finance et le conseil. Depuis 6 ans, avec une équipe soudée, nous avons travaillé sans relâche pour que Romanèche-Thorins change de visage et gagne en qualité de vie.
-
-Mais l'action publique est un temps long, et de nombreux projets attendent encore d'être finalisés pour vous bénéficier pleinement. C'est avec cette même rigueur et une envie intacte que je sollicite votre confiance pour un nouveau mandat.`,
+        bio: `Romanéchois depuis 28 ans.
+        
+        Après une carrière exigeante dans la finance et le conseil, j’ai choisi en 2020 de mettre mon expérience au service de notre collectivité. 
+        
+        Depuis 6 ans, avec une équipe soudée, nous avons travaillé sans relâche pour que Romanèche-Thorins change de visage et gagne en qualité de vie. 
+        
+        Mais l’action publique est un temps long, et de nombreux projets attendent encore d'être finalisés pour vous bénéficier pleinement. C’est avec cette même rigueur et une envie intacte que je sollicite votre confiance pour un nouveau mandat.`,
         photo: yannickvacher
     },
     {
         name: "Monique Lenfant Dutraive",
-        profession: "Responsable de service social retraitée",
+        profession: "Retraitée - Service Social ",
         engagement: "Je souhaite continuer à mettre mes compétences humaines et administratives au service d'une commune solidaire et attentionnée.",
-        bio: `Installée au quartier du Moulin à Vent depuis 2013, je suis issue d'une famille de vignerons de Fleurie. J'ai consacré ma vie professionnelle au service social pour différents ministères.
-
-Conseillère municipale sortante, je me suis particulièrement investie au CCAS pour soutenir les plus fragiles d'entre nous. Très active dans le milieu associatif, notamment pour les résidents de l'EHPAD et nos anciens, je souhaite continuer à mettre mes compétences humaines et administratives au service d'une commune solidaire et attentionnée envers chacun de ses habitants.`,
+        bio: `Quartier du Moulin à Vent depuis 2013.
+        
+        Issue d’une famille de vignerons de Fleurie, j'ai consacré ma vie professionnelle au service social pour différents ministères. Conseillère municipale sortante, je me suis particulièrement investie au CCAS pour soutenir les plus fragiles d'entre nous. 
+        
+        Très active dans le milieu associatif, notamment pour les résidents de l'EHPAD et nos anciens, je souhaite continuer à mettre mes compétences humaines et administratives au service d'une commune solidaire et attentionnée envers chacun de ses habitants.`,
         photo: moniquedutraive
     },
     {
         name: "Jean-Pierre Reynier",
-        profession: "1er Adjoint sortant / Ancien technicien territorial",
+        profession: "Retraité – Technicien Territorial",
         engagement: "Je souhaite poursuivre ce travail de terrain pour vous garantir des infrastructures sûres et de qualité.",
-        bio: `Romanéchois depuis 1966, mon parcours est celui d'un engagement total pour Romanèche-Thorins, que ce soit à la tête du centre de secours pendant 10 ans ou au sein de la VSR depuis deux décennies.
+        bio: `Romanéchois depuis 1966.
+        
+        Mon parcours est celui d’un engagement total pour Romanèche-Thorins, que ce soit à la tête du centre de secours pendant 10 ans ou au sein de la VSR depuis deux décennies.
 
-Marié et père de trois enfants, j'ai mis ma carrière de technicien territorial au service de l'aménagement de notre espace public. Adjoint à la voirie sortant, je souhaite poursuivre ce travail de terrain pour vous garantir des infrastructures sûres et de qualité, en m'appuyant sur ma connaissance intime de notre territoire.`,
+        Marié et père de trois enfants, j’ai mis ma carrière de technicien territorial au service de l'aménagement de notre espace public. 
+
+        Adjoint à la voirie sortant, je souhaite poursuivre ce travail de terrain pour vous garantir des infrastructures sûres et de qualité, en m'appuyant sur ma connaissance intime de notre territoire.`,
         photo: jeanpierrereynier
     },
     {
         name: "Perrine Janin",
         profession: "Viticultrice",
         engagement: "Mon engagement : soutenir les projets en cours tout en portant des idées innovantes pour l'avenir de nos concitoyens.",
-        bio: `Enfant du pays du quartier de la Chanillière, j'ai grandi au cœur de nos vignes. Après des études d'œnologie et des expériences enrichissantes en Australie et aux États-Unis, je suis revenue aux racines pour travailler aux côtés de mon père sur le domaine familial.
+        bio: `Enfant du pays, quartier de la Chanillière.
+        
+        Originaire de Romanèche, j’ai grandi au cœur de nos vignes. 
+        
+        Après des études d’œnologie et des expériences enrichissantes en Australie et aux États-Unis, je suis revenue aux racines pour travailler aux côtés de mon père sur le domaine familial. 
 
-Très impliquée dans la vie du Cru Moulin-à-Vent, je souhaite aujourd'hui apporter l'énergie de ma jeunesse et un regard neuf à notre conseil municipal. Mon engagement : soutenir les projets en cours tout en portant des idées innovantes pour l'avenir de nos concitoyens.`
+        Très impliquée dans la vie du Cru Moulin-à-Vent, je souhaite aujourd'hui apporter l'énergie de ma jeunesse et un regard neuf à notre conseil municipal. 
+
+        Mon engagement : soutenir les projets en cours tout en portant des idées innovantes pour l'avenir de nos concitoyens.`
     },
     {
         name: "Joël Broutin",
-        profession: "Lorem ipsum dolor sit amet",
-        engagement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        profession: "",
+        engagement: "",
         bio: bioEnCours,
         photo: joelbroutin
     },
     {
         name: "Pascale Romani",
-        profession: "Lorem ipsum dolor sit amet",
-        engagement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        profession: "",
+        engagement: "",
         bio: bioEnCours
     },
     {
         name: "Maurice Favre",
-        profession: "Adjoint aux travaux / Ancien Directeur technique",
+        profession: "Retraité – Directeur Technique",
         engagement: "Mon engagement personnel : mettre mon expertise professionnelle au service du suivi rigoureux de nos chantiers communaux.",
-        bio: `Résident depuis 1981, j'ai été Directeur technique dans le bâtiment durant ma carrière. J'ai toujours aimé construire et organiser. Engagé de longue date dans le milieu associatif et passionné d'auto-modélisme, j'ai rejoint le conseil en 2014 avant de devenir Adjoint en charge des travaux en 2020.
-
-Mon engagement personnel reste le même : mettre mon expertise professionnelle au service de notre liste pour assurer le suivi rigoureux de nos chantiers communaux et préparer l'avenir de nos bâtiments.`,
+        bio: `Résident depuis 1981
+        
+        Directeur technique dans le bâtiment durant ma carrière, j’ai toujours aimé construire et organiser. 
+        
+        Engagé de longue date dans le milieu associatif et passionné d'auto-modélisme, j'ai rejoint le conseil en 2014 avant de devenir Adjoint en charge des travaux en 2020. 
+        
+        Mon engagement personnel reste le même : mettre mon expertise professionnelle au service de notre liste pour assurer le suivi rigoureux de nos chantiers communaux et préparer l'avenir
+de nos bâtiments.`,
         photo: mauricefavre
     },
     {
         name: "Vanina Depardon",
         profession: "Responsable adjointe en logistique vinicole",
         engagement: "Je m'engage avec détermination pour poursuivre les projets structurants et contribuer au bien-être de notre village.",
-        bio: `Résidente depuis 2018, mon lien avec Romanèche-Thorins remonte à 2002, année où j'y tenais un commerce. Ancienne commerçante, je suis aujourd'hui responsable logistique dans le secteur du vin.
-
-Je suis également très impliquée dans la vie associative en tant que trésorière de la Pétanque Romanéchoise. Je m'engage avec détermination pour poursuivre les projets structurants lancés par l'équipe actuelle et contribuer, chaque jour, à améliorer le bien-être et le dynamisme de notre beau village.`
+        bio: `Résidente depuis 2018.
+        
+        Mon lien avec Romanèche-Thorins remonte à 2002, année où j'y tenais un commerce. Aujourd'hui responsable logistique dans le secteur du vin, je suis également très impliquée dans la vie associative en tant que trésorière de la Pétanque Romanéchoise. 
+        
+        Je m'engage avec détermination pour poursuivre les projets structurants lancés par l'équipe actuelle et contribuer, chaque jour, à améliorer le bien-être et le dynamisme de notre beau village.`
     },
     {
         name: "Frédéric Meunier",
         profession: "Aide-soignant en santé publique",
         engagement: "Je veux défendre la culture comme ciment de notre lien social, favorisant le partage et le dynamisme.",
-        bio: `Installé au quartier de la Pierre depuis 20 ans, je suis aide-soignant dévoué au service public hospitalier. J'ai passé ma carrière à prendre soin des autres. Profondément attaché au quartier de la Pierre, je souhaite désormais porter cet engagement au sein de notre conseil municipal.
-
-Passionné de musique et de théâtre, je suis convaincu que la culture est le ciment de notre lien social. Elle favorise le partage et le dynamisme, des valeurs que je veux défendre pour notre commune.`,
+        bio: `Quartier de la Pierre depuis 20 ans.
+        Aide-soignant dévoué au service public hospitalier, j'ai passé ma carrière à prendre soin des autres. 
+        
+        Profondément attaché au quartier de la Pierre, je souhaite désormais porter cet engagement au sein de notre conseil municipal. 
+        
+        Passionné de musique et de théâtre, je suis convaincu que la culture est le ciment de notre lien social. Elle favorise le partage et le dynamisme, des valeurs que je veux défendre pour notre commune.`,
         photo: fredericmeunier
     },
     {
         name: "Josette Gombert",
-        profession: "Adjointe sortante au social / Institutrice retraitée",
+        profession: "Retraité - Institutrice",
         engagement: "Je reste présente pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.",
-        bio: `Installée au quartier des Guillates depuis 15 ans, ancienne institutrice, j'ai eu l'honneur de servir notre commune en tant qu'adjointe au social durant ce mandat. Installée définitivement dans notre maison de famille aux Guillates, je ressens une immense fierté pour tout ce que nous avons accompli en 6 ans.
-
-Si je souhaite aujourd'hui laisser la place à de nouvelles responsabilités, je reste présente sur la liste pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.`,
+        bio: `Quartier des Guillates depuis 15 ans.
+        
+        Ancienne institutrice, j'ai eu l'honneur de servir notre commune en tant qu'adjointe au social durant ce mandat. 
+        
+        Installée définitivement dans notre maison de famille aux Guillates, je ressens une immense fierté pour tout ce que nous avons accompli en 6 ans. 
+        
+        Si je souhaite aujourd'hui laisser la place à de nouvelles responsabilités, je reste présente sur la liste pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.`,
         photo: josettegombert
     },
     {
         name: "Raphael Gaudin",
         profession: "Responsable informatique",
         engagement: "Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.",
-        bio: `Habitant de la rue des Garniers depuis 3 ans, j'ai immédiatement été séduit par la convivialité et l'âme de notre village. Pour m'ancrer concrètement dans la vie locale, j'ai rejoint le Comité des Fêtes et je ne manque jamais le rendez-vous annuel des vendanges.
-
-Professionnel de l'informatique, je souhaite mettre ma technicité au service d'une gestion municipale dont j'ai pu apprécier le sérieux et la rigueur. Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.`
+        bio: `Rue des Garniers depuis 3 ans.
+        Habitant de la rue des Garniers depuis 3 ans, j’ai immédiatement été séduit par la convivialité et l'âme de notre village. 
+        
+        Pour m'ancrer concrètement dans la vie locale, j'ai rejoint le Comité des Fêtes et je ne manque jamais le rendez-vous annuel des vendanges. 
+        
+        Professionnel de l'informatique, je souhaite mettre ma technicité au service d'une gestion municipale dont j'ai pu apprécier le sérieux et la rigueur. Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.
+        `
     },
     {
         name: "Catherine Vincent",
-        profession: "Ancienne salariée locale",
+        profession: "Retraité - Salariée locale",
         engagement: "Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.",
-        bio: `Enfant de Romanèche-Thorins, j'ai toujours vécu à Romanèche, un village auquel je suis viscéralement attachée. En y travaillant durant la majeure partie de ma carrière, j'ai eu la chance de bien connaître notre commune et, surtout, de vous connaître, vous, ses habitants.
-
-Ancienne membre active du foyer rural, j'ai aujourd'hui le désir profond de m'investir davantage. Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.`
+        bio: `J’ai toujours vécu à Romanèche, un village auquel je suis viscéralement attachée. 
+        
+        En y travaillant durant la majeure partie de ma carrière, j'ai eu la chance de bien connaître notre commune et, surtout, de vous connaître, vous, ses habitants. 
+        
+        Ancienne membre active du foyer rural, j'ai aujourd'hui le désir profond de m'investir davantage. Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.`
     },
     {
         name: "Sébastien Lépine",
         profession: "Engineering Manager",
         engagement: "Convaincu que chacun peut apporter sa pierre à l'édifice, je mets mon énergie et mes compétences au service de Romanèche-Thorins.",
-        bio: `36 ans, marié et papa d'un enfant de 2 ans, je suis originaire du Mâconnais. Avant notre installation à Romanèche-Thorins, j'ai été joueur de football, président des Conscrits, membre actif d'associations locales et artificier, ce qui m'a permis de découvrir de nombreuses communes de la région.
-
-Professionnellement, je suis Engineering Manager dans l'informatique, spécialisé dans la gestion des temps et de la planification, accompagnant des entreprises de toutes tailles au niveau national et international.
-
-Depuis trois ans, nous avons posé nos valises dans le quartier des Fargets, convaincus que Romanèche-Thorins était l'endroit idéal pour concilier vie professionnelle, vie de famille et engagement local. Je souhaite mettre mon énergie et mes compétences au service de notre village pour en renforcer le dynamisme et la convivialité.`
+        bio: `Quartier des Fargets depuis 4 ans.
+        
+        Originaire du Mâconnais et jeune papa, j'ai trouvé à Romanèche-Thorins l'équilibre parfait entre vie de famille et engagement local. 
+        
+        Membre actif d'associations locales dans les diffrentes communces de résidence et artificier, j'ai une affection particulière pour l'animation de nos communes. 
+        
+        Professionnellement, je dirige des équipes pour réaliser des projets auprès d’entreprises de toutes tailles, en France comme à l’international, et souhaite aujourd’hui mettre cette expertise au service de notre village.
+        
+        Je mets mon énergie à votre service pour renforcer ce qui fait notre force : le dynamisme et la convivialité.`
     },
     {
         name: "Andréa Moscicki",
-        profession: "Spécialiste du bâti ancien / Intermittente du spectacle",
+        profession: "Intermittente du spectacle",
         engagement: "Je m'engage pour pérenniser ce renouveau que nous connaissons depuis 5 ans avec Yannick Vacher.",
-        bio: `Installée au lieu-dit la Rivière depuis 2005, je suis descendante d'une famille profondément liée à l'histoire de notre village. Mon parcours, de la médecine chinoise à la restauration du bâti ancien (pisé, chaux), m'a appris la patience et le respect du patrimoine.
-
-Après avoir travaillé la vigne, j'ai à cœur d'améliorer les conditions de vie de ceux qui font l'âme de notre village. Je m'engage pour pérenniser ce renouveau que nous connaissons depuis 5 ans avec Yannick Vacher.`
+        bio: `Lieu-dit la Rivière depuis 2005.
+        
+        Descendante d'une famille profondément liée à l'histoire de notre village, je suis revenue m'installer à la Rivière en 2005. 
+        
+        Mon parcours, de la médecine chinoise à la restauration du bâti ancien (pisé, chaux), m’a appris la patience et le respect du patrimoine. 
+        
+        Après avoir travaillé la vigne, j'ai à cœur d'améliorer les conditions de vie de ceux qui font l'âme de notre village. 
+        
+        Je m’engage pour pérenniser ce renouveau que nous connaissons depuis 5 ans avec Yannick Vacher.
+        `
     },
     {
         name: "Joaquin Fernandez",
-        profession: "Lorem ipsum dolor sit amet",
-        engagement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        profession: "",
+        engagement: "",
         bio: bioEnCours
     },
     {
         name: "Annie Rochet",
-        profession: "Lorem ipsum dolor sit amet",
-        engagement: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+        profession: "",
+        engagement: "",
         bio: bioEnCours
     },
     {
         name: "Marc Dupuy",
         profession: "Retraité",
         engagement: "Fier de ce village qui m'a si bien accueilli, je souhaite apporter ma contribution au rayonnement de notre commune.",
-        bio: `Installé depuis quatre ans dans le quartier des Fargets, j'ai été immédiatement séduit par la beauté de nos paysages et la richesse de nos échanges. Observateur du travail accompli par l'équipe actuelle, j'ai été convaincu par la quantité et la qualité des travaux réalisés.
-
-Fier de ce village qui m'a si bien accueilli, je souhaite aujourd'hui m'impliquer pour rendre la pareille et apporter ma contribution au rayonnement de notre commune.`
+        bio: `Quartier des FargetS depuis 4 ans.
+        
+        Installé depuis quatre ans dans le quartier des Fargets, j’ai été immédiatement séduit par la beauté de nos paysages et la richesse de nos échanges. 
+        
+        Observateur du travail accompli par l'équipe actuelle, j'ai été convaincu par la quantité et la qualité des travaux réalisés. 
+        
+        Fier de ce village qui m'a si bien accueilli, je souhaite aujourd'hui m'impliquer pour rendre la pareille et apporter ma contribution au rayonnement de notre commune.
+        `
     },
     {
         name: "Andrée Defnet",
         profession: "Présidente des ADMR / Couturière retraitée",
         engagement: "Je mets mon sens de l'écoute et mes compétences relationnelles au service de tous les Romanéchois, avec la proximité pour seule boussole.",
-        bio: `Installée au quartier de la Rivière depuis 1981, mariée et mère de trois enfants, j'habite le quartier de la Rivière depuis plus de 40 ans. Présidente locale des ADMR, mon combat quotidien est de permettre à nos aînés de rester chez eux dans les meilleures conditions possibles.
-
-Déjà engagée au CCAS pour soutenir les personnes en difficulté, j'ai rejoint la liste pour mettre mon sens de l'écoute et mes compétences relationnelles au service de tous les Romanéchois, avec la proximité pour seule boussole.`
+        bio: `Quartier de la Rivière depuis 1981.
+        
+        Mariée et mère de trois enfants, j’habite le quartier de la Rivière depuis plus de 40 ans. 
+        
+        Présidente locale des ADMR, mon combat quotidien est de permettre à nos aînés de rester chez eux dans les meilleures conditions possibles. 
+        
+        Déjà engagée au CCAS pour soutenir les personnes en difficulté, j'ai rejoint la liste pour mettre mon sens de l'écoute et mes compétences relationnelles au service de tous les Romanéchois, avec la proximité pour seule boussole."
+        `
     },
     {
         name: "Jean-Pierre Large",
-        profession: "Retraité de l'hôtellerie-restauration",
+        profession: "Retraité - Hôtellerie-restauration",
         engagement: "Je m'engage pour apporter ma modeste pierre à l'édifice et m'investir pleinement pour la qualité de vie de chacun d'entre vous.",
-        bio: `Natif de Romanèche-Thorins, je suis revenu dans la maison familiale en 2020 après 45 ans d'une carrière passionnée dans l'hôtellerie-restauration. Mon métier m'a appris l'écoute et le sens du service.
-
-Frappé par l'ampleur inédite des travaux réalisés lors du dernier mandat, j'ai ressenti le besoin de soutenir cet élan. Je m'engage pour apporter ma modeste pierre à l'édifice et m'investir pleinement pour la qualité de vie de chacun d'entre vous.`
+        bio: `Natif de Romanèche-Thorins.
+        
+        "Enfant du pays, je suis revenu dans la maison familiale en 2020 après 45 ans d'une carrière passionnée dans l'hôtellerie-restauration. 
+        
+        Mon métier m'a appris l'écoute et le sens du service. Frappé par l'ampleur inédite des travaux réalisés lors du dernier mandat, j'ai ressenti le besoin de soutenir cet élan. 
+        
+        Je m'engage pour apporter ma modeste pierre à l'édifice et m'investir pleinement pour la qualité de vie de chacun d'entre vous."
+        `
     },
 ];
 
