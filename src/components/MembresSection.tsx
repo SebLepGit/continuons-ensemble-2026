@@ -167,7 +167,7 @@ de nos bâtiments.`,
         
         Originaire du Mâconnais et jeune papa, j'ai trouvé à Romanèche-Thorins l'équilibre parfait entre vie de famille et engagement local. 
         
-        Membre actif d'associations locales dans les diffrentes communces de résidence et artificier, j'ai une affection particulière pour l'animation de nos communes. 
+        Membre actif d'associations locales dans les diffrentes communes de résidence et artificier, j'ai une affection particulière pour l'animation de nos communes. 
         
         Professionnellement, je dirige des équipes pour réaliser des projets auprès d’entreprises de toutes tailles, en France comme à l’international, et souhaite aujourd’hui mettre cette expertise au service de notre village.
         
