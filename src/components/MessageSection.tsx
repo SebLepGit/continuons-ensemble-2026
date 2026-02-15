@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
 import { Quote } from 'lucide-react';
-import mairePortrait from '@/assets/yannick-vacher-portrait.png';
+import mairePortrait from '@/assets/portraits/yannick-vacher-portrait.png'
 
 const MessageSection = () => {
   const ref = useRef(null);
@@ -26,7 +26,7 @@ const MessageSection = () => {
               className="flex-shrink-0"
             >
               <div className="relative">
-                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary shadow-card">
+                <div className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-4 border-secondary shadow-card bg-[#002E3F]">
                   <img 
                     src={mairePortrait} 
                     alt="Yannick Vacher, Maire de Romanèche-Thorins"

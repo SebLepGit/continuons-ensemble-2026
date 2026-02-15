@@ -3,13 +3,26 @@ import {useInView} from 'framer-motion';
 import {useRef, useState} from 'react';
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog';
 import {Quote, X} from 'lucide-react';
-import yannickvacher from '@/assets/yannick-vacher-portrait.png';
-import jeanpierrereynier from '@/assets/portraits/jeanpierre-reynier-portrait.png';
-import mauricefavre from '@/assets/portraits/maurice-favre-portrait.png';
-import josettegombert from '@/assets/portraits/josette-gombert-portrait.png';
-import joelbroutin from '@/assets/portraits/joel-broutin-portrait.png';
-import moniquedutraive from '@/assets/portraits/monique-dutraive-portrait.png';
-import fredericmeunier from '@/assets/portraits/frederic-meunier-portrait.png';
+
+import andreedefnetportrait from '@/assets/portraits/andree-defnet-portrait.png';
+import annierochetportrait from '@/assets/portraits/annie-rochet-portrait.png';
+import catherinevincentportrait from '@/assets/portraits/catherine-vincent-portrait.png';
+import fredericmeunierportrait from '@/assets/portraits/frederic-meunier-portrait.png';
+import jeanpierrelargportrait from '@/assets/portraits/jean-pierre-large-portrait.png';
+import jeanpierrereynierportrait from '@/assets/portraits/jean-pierre-reynier-portrait.png';
+import joaquinfernandezportrait from '@/assets/portraits/joaquin-fernadez-portrait.png';
+import joelbroutinportrait from '@/assets/portraits/joel-broutin-portrait.png';
+import josettegombertportrait from '@/assets/portraits/josette-gombert-portrait.png';
+import lepinesebastienportrait from '@/assets/portraits/lepine-sebastien-portrait.png';
+import marcdupuyportrait from '@/assets/portraits/marc-dupuy-portrait.png';
+import mauricefavreportrait from '@/assets/portraits/maurice-favre-portrait.png';
+import moniquedutraiveportrait from '@/assets/portraits/monique-dutraive-portrait.png';
+import pascaleromaniportrait from '@/assets/portraits/pascale-romani-portrait.png';
+import perrinejaninportrait from '@/assets/portraits/perrine-janin-portrait.png';
+import raphaelgaudinportrait from '@/assets/portraits/raphael-gaudin-portrait.png';
+import vaninadepardonportrait from '@/assets/portraits/vanina-depardon-portrait.png';
+import yannickvacherportrait from '@/assets/portraits/yannick-vacher-portrait.png';
+
 
 interface Member {
     name: string;
@@ -35,7 +48,7 @@ const members: Member[] = [
         Depuis 6 ans, avec une équipe soudée, nous avons travaillé sans relâche pour que Romanèche-Thorins change de visage et gagne en qualité de vie. 
         
         Mais l’action publique est un temps long, et de nombreux projets attendent encore d'être finalisés pour vous bénéficier pleinement. C’est avec cette même rigueur et une envie intacte que je sollicite votre confiance pour un nouveau mandat.`,
-        photo: yannickvacher
+        photo: yannickvacherportrait
     },
     {
         name: "Monique Lenfant Dutraive",
@@ -46,7 +59,7 @@ const members: Member[] = [
         Issue d’une famille de vignerons de Fleurie, j'ai consacré ma vie professionnelle au service social pour différents ministères. Conseillère municipale sortante, je me suis particulièrement investie au CCAS pour soutenir les plus fragiles d'entre nous. 
         
         Très active dans le milieu associatif, notamment pour les résidents de l'EHPAD et nos anciens, je souhaite continuer à mettre mes compétences humaines et administratives au service d'une commune solidaire et attentionnée envers chacun de ses habitants.`,
-        photo: moniquedutraive
+        photo: moniquedutraiveportrait
     },
     {
         name: "Jean-Pierre Reynier",
@@ -59,7 +72,7 @@ const members: Member[] = [
         Marié et père de trois enfants, j’ai mis ma carrière de technicien territorial au service de l'aménagement de notre espace public. 
 
         Adjoint à la voirie sortant, je souhaite poursuivre ce travail de terrain pour vous garantir des infrastructures sûres et de qualité, en m'appuyant sur ma connaissance intime de notre territoire.`,
-        photo: jeanpierrereynier
+        photo: jeanpierrereynierportrait
     },
     {
         name: "Perrine Janin",
@@ -73,20 +86,22 @@ const members: Member[] = [
 
         Très impliquée dans la vie du Cru Moulin-à-Vent, je souhaite aujourd'hui apporter l'énergie de ma jeunesse et un regard neuf à notre conseil municipal. 
 
-        Mon engagement : soutenir les projets en cours tout en portant des idées innovantes pour l'avenir de nos concitoyens.`
+        Mon engagement : soutenir les projets en cours tout en portant des idées innovantes pour l'avenir de nos concitoyens.`,
+        photo: perrinejaninportrait
     },
     {
         name: "Joël Broutin",
         profession: "",
         engagement: "",
         bio: bioEnCours,
-        photo: joelbroutin
+        photo: joelbroutinportrait
     },
     {
         name: "Pascale Romani",
         profession: "",
         engagement: "",
-        bio: bioEnCours
+        bio: bioEnCours,
+        photo: pascaleromaniportrait
     },
     {
         name: "Maurice Favre",
@@ -100,7 +115,7 @@ const members: Member[] = [
         
         Mon engagement personnel reste le même : mettre mon expertise professionnelle au service de notre liste pour assurer le suivi rigoureux de nos chantiers communaux et préparer l'avenir
 de nos bâtiments.`,
-        photo: mauricefavre
+        photo: mauricefavreportrait
     },
     {
         name: "Vanina Depardon",
@@ -110,7 +125,8 @@ de nos bâtiments.`,
         
         Mon lien avec Romanèche-Thorins remonte à 2002, année où j'y tenais un commerce. Aujourd'hui responsable logistique dans le secteur du vin, je suis également très impliquée dans la vie associative en tant que trésorière de la Pétanque Romanéchoise. 
         
-        Je m'engage avec détermination pour poursuivre les projets structurants lancés par l'équipe actuelle et contribuer, chaque jour, à améliorer le bien-être et le dynamisme de notre beau village.`
+        Je m'engage avec détermination pour poursuivre les projets structurants lancés par l'équipe actuelle et contribuer, chaque jour, à améliorer le bien-être et le dynamisme de notre beau village.`,
+        photo: vaninadepardonportrait
     },
     {
         name: "Frédéric Meunier",
@@ -122,7 +138,7 @@ de nos bâtiments.`,
         Profondément attaché au quartier de la Pierre, je souhaite désormais porter cet engagement au sein de notre conseil municipal. 
         
         Passionné de musique et de théâtre, je suis convaincu que la culture est le ciment de notre lien social. Elle favorise le partage et le dynamisme, des valeurs que je veux défendre pour notre commune.`,
-        photo: fredericmeunier
+        photo: fredericmeunierportrait
     },
     {
         name: "Josette Gombert",
@@ -135,7 +151,7 @@ de nos bâtiments.`,
         Installée définitivement dans notre maison de famille aux Guillates, je ressens une immense fierté pour tout ce que nous avons accompli en 6 ans. 
         
         Si je souhaite aujourd'hui laisser la place à de nouvelles responsabilités, je reste présente sur la liste pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.`,
-        photo: josettegombert
+        photo: josettegombertportrait
     },
     {
         name: "Raphael Gaudin",
@@ -147,7 +163,8 @@ de nos bâtiments.`,
         Pour m'ancrer concrètement dans la vie locale, j'ai rejoint le Comité des Fêtes et je ne manque jamais le rendez-vous annuel des vendanges. 
         
         Professionnel de l'informatique, je souhaite mettre ma technicité au service d'une gestion municipale dont j'ai pu apprécier le sérieux et la rigueur. Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.
-        `
+        `,
+        photo: raphaelgaudinportrait
     },
     {
         name: "Catherine Vincent",
@@ -157,7 +174,8 @@ de nos bâtiments.`,
         
         En y travaillant durant la majeure partie de ma carrière, j'ai eu la chance de bien connaître notre commune et, surtout, de vous connaître, vous, ses habitants. 
         
-        Ancienne membre active du foyer rural, j'ai aujourd'hui le désir profond de m'investir davantage. Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.`
+        Ancienne membre active du foyer rural, j'ai aujourd'hui le désir profond de m'investir davantage. Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.`,
+        photo: catherinevincentportrait
     },
     {
         name: "Sébastien Lépine",
@@ -171,7 +189,8 @@ de nos bâtiments.`,
         
         Professionnellement, je dirige des équipes pour réaliser des projets auprès d’entreprises de toutes tailles, en France comme à l’international, et souhaite aujourd’hui mettre cette expertise au service de notre village.
         
-        Je mets mon énergie à votre service pour renforcer ce qui fait notre force : le dynamisme et la convivialité.`
+        Je mets mon énergie à votre service pour renforcer ce qui fait notre force : le dynamisme et la convivialité.`,
+        photo: lepinesebastienportrait
     },
     {
         name: "Andréa Moscicki",
@@ -192,13 +211,22 @@ de nos bâtiments.`,
         name: "Joaquin Fernandez",
         profession: "",
         engagement: "",
-        bio: bioEnCours
+        bio: bioEnCours,
+        photo: joaquinfernandezportrait
     },
     {
         name: "Annie Rochet",
-        profession: "",
-        engagement: "",
-        bio: bioEnCours
+        profession: "Retraité - Horlogère",
+        engagement: "M’investir avec sérieux et disponibilité pour faire vivre notre commune, préserver son cadre naturel et contribuer, avec des idées concrètes, à son dynamisme et à son attractivité",
+        bio: `Rue des Vignes depuis 2025.
+        
+        Originaire du Haut-Doubs, j’ai exercé le métier d’horlogère avec passion pendant de nombreuses années, un métier de précision, de patience et d’exigence. 
+        
+        Aujourd’hui retraitée et grand-mère de trois petits-enfants, j’ai choisi avec mon mari de nous installer à Romanèche-Thorins en août 2025 pour nous rapprocher de notre famille et profiter pleinement de cette nouvelle étape de vie.
+
+        Disposant désormais de temps et d’énergie, je souhaite m’investir activement dans la vie de notre commune. Mon ambition est de contribuer à la redynamisation de notre bourgade, dans le respect de son environnement et de son identité. Forte de mon expérience et du regard que m’apporte mon parcours dans une autre région, j’aimerais partager des idées nouvelles et participer, avec engagement et bienveillance, aux projets tournés vers l’avenir de Romanèche-Thorins.
+        `,
+        photo: annierochetportrait
     },
     {
         name: "Marc Dupuy",
@@ -211,7 +239,8 @@ de nos bâtiments.`,
         Observateur du travail accompli par l'équipe actuelle, j'ai été convaincu par la quantité et la qualité des travaux réalisés. 
         
         Fier de ce village qui m'a si bien accueilli, je souhaite aujourd'hui m'impliquer pour rendre la pareille et apporter ma contribution au rayonnement de notre commune.
-        `
+        `,
+        photo: marcdupuyportrait
     },
     {
         name: "Andrée Defnet",
@@ -224,7 +253,8 @@ de nos bâtiments.`,
         Présidente locale des ADMR, mon combat quotidien est de permettre à nos aînés de rester chez eux dans les meilleures conditions possibles. 
         
         Déjà engagée au CCAS pour soutenir les personnes en difficulté, j'ai rejoint la liste pour mettre mon sens de l'écoute et mes compétences relationnelles au service de tous les Romanéchois, avec la proximité pour seule boussole."
-        `
+        `,
+        photo: andreedefnetportrait
     },
     {
         name: "Jean-Pierre Large",
@@ -237,7 +267,8 @@ de nos bâtiments.`,
         Mon métier m'a appris l'écoute et le sens du service. Frappé par l'ampleur inédite des travaux réalisés lors du dernier mandat, j'ai ressenti le besoin de soutenir cet élan. 
         
         Je m'engage pour apporter ma modeste pierre à l'édifice et m'investir pleinement pour la qualité de vie de chacun d'entre vous."
-        `
+        `,
+        photo: jeanpierrelargportrait
     },
 ];
 
@@ -264,7 +295,7 @@ const MemberCard = ({member, index, isInView, onClick}: MemberCardProps) => {
         >
             {/* Card Container - Instagram-like aspect ratio (4:5) */}
             <div
-                className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-soft group-hover:shadow-card transition-shadow duration-300">
+                className="relative aspect-[4/5] rounded-xl overflow-hidden shadow-soft group-hover:shadow-card transition-shadow duration-300 bg-[#002E3F]">
                 {/* Background Image or Initials */}
                 {member.photo ? (
                     <img
@@ -350,7 +381,7 @@ const MemberModal = ({member, isOpen, onClose}: MemberModalProps) => {
                         <div className="relative inline-block">
                             {member.photo ? (
                                 <div
-                                    className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-card mx-auto lg:mx-0">
+                                    className="w-40 h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 rounded-full overflow-hidden border-4 border-secondary shadow-card mx-auto lg:mx-0 bg-[#002E3F]">
                                     <img
                                         src={member.photo}
                                         alt={`Portrait de ${member.name}`}
