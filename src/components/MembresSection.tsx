@@ -22,6 +22,7 @@ import perrinejaninportrait from '@/assets/portraits/perrine-janin-portrait.png'
 import raphaelgaudinportrait from '@/assets/portraits/raphael-gaudin-portrait.png';
 import vaninadepardonportrait from '@/assets/portraits/vanina-depardon-portrait.png';
 import yannickvacherportrait from '@/assets/portraits/yannick-vacher-portrait.png';
+import andreamoscickiportrait from '@/assets/portraits/andrea-moscicki-portrait.png';
 
 
 interface Member {
@@ -205,10 +206,11 @@ de nos bâtiments.`,
         Après avoir travaillé la vigne, j'ai à cœur d'améliorer les conditions de vie de ceux qui font l'âme de notre village. 
         
         Je m’engage pour pérenniser ce renouveau que nous connaissons depuis 5 ans avec Yannick Vacher.
-        `
+        `,
+        photo: andreamoscickiportrait
     },
     {
-        name: "Joaquin Fernandez",
+        name: "Joaquim Fernandez",
         profession: "",
         engagement: "",
         bio: bioEnCours,
