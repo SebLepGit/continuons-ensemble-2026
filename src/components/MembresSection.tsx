@@ -141,9 +141,14 @@ const members: Member[] = [
         engagement: "Je m'engage avec détermination pour poursuivre les projets structurants et contribuer au bien-être de notre village.",
         bio: `Résidente depuis 2018.
         
-        Mon lien avec Romanèche-Thorins remonte à 2002, année où j'y tenais un commerce. Aujourd'hui responsable logistique dans le secteur du vin, je suis également très impliquée dans la vie associative en tant que trésorière de la Pétanque Romanéchoise. 
+        Mon lien avec Romanèche-Thorins est une histoire de cœur qui dure : j'ai tenu un commerce dès 2002 (Vival) avant de m'y installer définitivement en 2018. 
         
-        Je m'engage avec détermination pour poursuivre les projets structurants lancés par l'équipe actuelle et contribuer, chaque jour, à améliorer le bien-être et le dynamisme de notre beau village.`,
+        Professionnelle de la logistique dans le secteur du vin, je suis très attachée à la vitalité de notre terroir.
+        
+        Mon engagement pour le village s'exprime par le concret : j'ai eu la fierté de participer à la création de l'association Romanescoeur en tant que trésorière adjointe, et je poursuis aujourd'hui cet investissement associatif comme trésorière de la pétanque Romanéchoise. 
+        
+        Je rejoins la liste de Yannick Vacher pour mettre cette énergie au service des projets en cours et veiller, chaque jour, au bien-être des habitants de notre commune.
+    `,
         photo: vaninadepardonportrait
     },
     {
@@ -151,6 +156,7 @@ const members: Member[] = [
         profession: "Aide-soignant en santé publique",
         engagement: "Je veux défendre la culture comme ciment de notre lien social, favorisant le partage et le dynamisme.",
         bio: `Quartier de la Pierre depuis 20 ans.
+        
         Aide-soignant dévoué au service public hospitalier, j'ai passé ma carrière à prendre soin des autres. 
         
         Profondément attaché au quartier de la Pierre, je souhaite désormais porter cet engagement au sein de notre conseil municipal. 
@@ -176,6 +182,7 @@ const members: Member[] = [
         profession: "Responsable informatique",
         engagement: "Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.",
         bio: `Rue des Garniers depuis 3 ans.
+        
         Habitant de la rue des Garniers depuis 3 ans, j’ai immédiatement été séduit par la convivialité et l'âme de notre village. 
         
         Pour m'ancrer concrètement dans la vie locale, j'ai rejoint le Comité des Fêtes et je ne manque jamais le rendez-vous annuel des vendanges. 
@@ -203,7 +210,7 @@ const members: Member[] = [
         
         Originaire du Mâconnais et jeune papa, j'ai trouvé à Romanèche-Thorins l'équilibre parfait entre vie de famille et engagement local. 
         
-        Membre actif d'associations locales dans les diffrentes communes de résidence et artificier, j'ai une affection particulière pour l'animation de nos communes. 
+        Membre actif d'associations locales dans les diffrents villages de résidence et artificier, j'ai une affection particulière pour l'animation de nos communes. 
         
         Professionnellement, je dirige des équipes pour réaliser des projets auprès d’entreprises de toutes tailles, en France comme à l’international, et souhaite aujourd’hui mettre cette expertise au service de notre village.
         
@@ -218,19 +225,26 @@ const members: Member[] = [
         
         Descendante d'une famille profondément liée à l'histoire de notre village, je suis revenue m'installer à la Rivière en 2005. 
         
-        Mon parcours, de la médecine chinoise à la restauration du bâti ancien (pisé, chaux), m’a appris la patience et le respect du patrimoine. 
+        Mon parcours est varié : de la médecine chinoise à la restauration du bâti ancien, j’ai toujours cultivé le respect des traditions et du patrimoine.
         
-        Après avoir travaillé la vigne, j'ai à cœur d'améliorer les conditions de vie de ceux qui font l'âme de notre village. 
+        J'ai également travaillé dans nos vignes pour financer mes études, une expérience qui m'a permis de mesurer la rudesse et la noblesse de ce métier. 
         
-        Je m’engage pour pérenniser ce renouveau que nous connaissons depuis 5 ans avec Yannick Vacher.
+        C'est ce vécu qui nourrit aujourd'hui mon envie de m'engager : je souhaite être une élue à l'écoute, capable de soutenir les vignerons et tous les habitants dans l'amélioration de leur cadre de vie. 
+        
+        Je rejoins Yannick Vacher pour pérenniser le renouveau de notre commune dans un esprit de partage et de respect.
         `,
         photo: andreamoscickiportrait
     },
     {
         name: "Joaquim Fernandez",
-        profession: "",
-        engagement: "",
-        bio: bioEnCours,
+        profession: "Aide-soignant",
+        engagement: "Habitant de la Maison Blanche depuis 40 ans, engagé auprès des habitants et du soin aux autres, pour une évolution humaine de notre village.",
+        bio: `Habitant de la Maison Blanche, rue des Ételles, depuis 40 ans.
+        
+        J’ai consacré ma carrière au soin des autres en tant qu’aide-soignant. Fort de 5 années passées à l’EHPAD de Romanèche-Thorins et de 10 ans d’engagement auprès de l’ADMR, j’ai tissé des liens profonds et sincères avec de nombreux habitants de notre commune.
+        
+        Je rejoins Yannick Vacher avec la volonté de représenter ces personnes que j'ai côtoyées quotidiennement. Mon souhait est de porter nos idées communes et de m'investir pleinement pour poursuivre l'évolution positive et humaine de notre village.
+        `,
         photo: joaquinfernandezportrait
     },
     {
@@ -243,7 +257,7 @@ const members: Member[] = [
         
         Aujourd’hui retraitée et grand-mère de trois petits-enfants, j’ai choisi avec mon mari de nous installer à Romanèche-Thorins en août 2025 pour nous rapprocher de notre famille et profiter pleinement de cette nouvelle étape de vie.
 
-        Disposant désormais de temps et d’énergie, je souhaite m’investir activement dans la vie de notre commune. Mon ambition est de contribuer à la redynamisation de notre bourgade, dans le respect de son environnement et de son identité. Forte de mon expérience et du regard que m’apporte mon parcours dans une autre région, j’aimerais partager des idées nouvelles et participer, avec engagement et bienveillance, aux projets tournés vers l’avenir de Romanèche-Thorins.
+        Disposant désormais de temps et d’énergie, je souhaite m’investir activement dans la vie de notre commune. Mon ambition est de contribuer à la redynamisation de notre village, dans le respect de son environnement et de son identité. Forte de mon expérience et du regard que m’apporte mon parcours dans une autre région, j’aimerais partager des idées nouvelles et participer, avec engagement et bienveillance, aux projets tournés vers l’avenir de Romanèche-Thorins.
         `,
         photo: annierochetportrait
     },
@@ -251,7 +265,7 @@ const members: Member[] = [
         name: "Marc Dupuy",
         profession: "Retraité",
         engagement: "Fier de ce village qui m'a si bien accueilli, je souhaite apporter ma contribution au rayonnement de notre commune.",
-        bio: `Quartier des FargetS depuis 4 ans.
+        bio: `Quartier des Fargets depuis 4 ans.
         
         Installé depuis quatre ans dans le quartier des Fargets, j’ai été immédiatement séduit par la beauté de nos paysages et la richesse de nos échanges. 
         
@@ -281,7 +295,7 @@ const members: Member[] = [
         engagement: "Je m'engage pour apporter ma modeste pierre à l'édifice et m'investir pleinement pour la qualité de vie de chacun d'entre vous.",
         bio: `Natif de Romanèche-Thorins.
         
-        "Enfant du pays, je suis revenu dans la maison familiale en 2020 après 45 ans d'une carrière passionnée dans l'hôtellerie-restauration. 
+        Enfant du pays, je suis revenu dans la maison familiale en 2020 après 45 ans d'une carrière passionnée dans l'hôtellerie-restauration. 
         
         Mon métier m'a appris l'écoute et le sens du service. Frappé par l'ampleur inédite des travaux réalisés lors du dernier mandat, j'ai ressenti le besoin de soutenir cet élan. 
         
