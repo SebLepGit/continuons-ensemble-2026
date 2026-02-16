@@ -26,7 +26,7 @@ const Footer = () => {
             <h4 className="font-heading font-semibold text-lg mb-4 md:text-end">Suivez-nous</h4>
             <div className="flex gap-4 md:flex-row-reverse">
               <motion.a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1DqvmWyYE6/?mibextid=wwXIfr"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
@@ -36,7 +36,7 @@ const Footer = () => {
                 <Facebook size={22} />
               </motion.a>
               <motion.a
-                href="https://instagram.com"
+                href="https://www.instagram.com/continuonsensemble_romaneche/?utm_source=ig_web_button_share_sheet"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
