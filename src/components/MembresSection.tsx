@@ -237,7 +237,7 @@ const members: Member[] = [
     },
     {
         name: "Joaquim Fernandez",
-        profession: "Aide-soignant",
+        profession: "Retraité - Aide-soignant",
         engagement: "Habitant de la Maison Blanche depuis 40 ans, engagé auprès des habitants et du soin aux autres, pour une évolution humaine de notre village.",
         bio: `Habitant de la Maison Blanche, rue des Ételles, depuis 40 ans.
         
@@ -263,7 +263,7 @@ const members: Member[] = [
     },
     {
         name: "Marc Dupuy",
-        profession: "Retraité",
+        profession: "Retraité - Commerciale automobile",
         engagement: "Fier de ce village qui m'a si bien accueilli, je souhaite apporter ma contribution au rayonnement de notre commune.",
         bio: `Quartier des Fargets depuis 4 ans.
         
