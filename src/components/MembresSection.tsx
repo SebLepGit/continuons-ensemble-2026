@@ -263,7 +263,7 @@ const members: Member[] = [
     },
     {
         name: "Marc Dupuy",
-        profession: "Retraité - Commerciale automobile",
+        profession: "Retraité - Commercial automobile",
         engagement: "Fier de ce village qui m'a si bien accueilli, je souhaite apporter ma contribution au rayonnement de notre commune.",
         bio: `Quartier des Fargets depuis 4 ans.
         
