@@ -321,7 +321,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
         C'est ce vécu qui nourrit aujourd'hui mon envie de m'engager : je souhaite être une élue à l'écoute, capable de soutenir les vignerons et tous les habitants dans l'amélioration de leur cadre de vie. 
         
         Je rejoins Yannick Vacher pour pérenniser le renouveau de notre commune dans un esprit de partage et de respect.
-        `,photo:YI},{name:"Joaquim Fernandez",profession:"Aide-soignant",engagement:"Habitant de la Maison Blanche depuis 40 ans, engagé auprès des habitants et du soin aux autres, pour une évolution humaine de notre village.",bio:`Habitant de la Maison Blanche, rue des Ételles, depuis 40 ans.
+        `,photo:YI},{name:"Joaquim Fernandez",profession:"Retraité - Aide-soignant",engagement:"Habitant de la Maison Blanche depuis 40 ans, engagé auprès des habitants et du soin aux autres, pour une évolution humaine de notre village.",bio:`Habitant de la Maison Blanche, rue des Ételles, depuis 40 ans.
         
         J’ai consacré ma carrière au soin des autres en tant qu’aide-soignant. Fort de 5 années passées à l’EHPAD de Romanèche-Thorins et de 10 ans d’engagement auprès de l’ADMR, j’ai tissé des liens profonds et sincères avec de nombreux habitants de notre commune.
         
@@ -333,7 +333,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
         Aujourd’hui retraitée et grand-mère de trois petits-enfants, j’ai choisi avec mon mari de nous installer à Romanèche-Thorins en août 2025 pour nous rapprocher de notre famille et profiter pleinement de cette nouvelle étape de vie.
 
         Disposant désormais de temps et d’énergie, je souhaite m’investir activement dans la vie de notre commune. Mon ambition est de contribuer à la redynamisation de notre village, dans le respect de son environnement et de son identité. Forte de mon expérience et du regard que m’apporte mon parcours dans une autre région, j’aimerais partager des idées nouvelles et participer, avec engagement et bienveillance, aux projets tournés vers l’avenir de Romanèche-Thorins.
-        `,photo:DI},{name:"Marc Dupuy",profession:"Retraité",engagement:"Fier de ce village qui m'a si bien accueilli, je souhaite apporter ma contribution au rayonnement de notre commune.",bio:`Quartier des Fargets depuis 4 ans.
+        `,photo:DI},{name:"Marc Dupuy",profession:"Retraité - Commerciale automobile",engagement:"Fier de ce village qui m'a si bien accueilli, je souhaite apporter ma contribution au rayonnement de notre commune.",bio:`Quartier des Fargets depuis 4 ans.
         
         Installé depuis quatre ans dans le quartier des Fargets, j’ai été immédiatement séduit par la beauté de nos paysages et la richesse de nos échanges. 
         
