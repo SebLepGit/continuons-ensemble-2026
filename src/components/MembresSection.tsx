@@ -40,7 +40,7 @@ const bioEnCours = "Biographie en cours de rédaction.";
 const members: Member[] = [
     {
         name: "Yannick Vacher",
-        profession: "Retraité - Finance & Conseil",
+        profession: "Maire sortant",
         engagement: "Avec rigueur et envie intacte, je sollicite votre confiance pour finaliser nos projets et continuer à améliorer notre qualité de vie.",
         bio: `Romanéchois depuis 28 ans.
         
@@ -59,7 +59,7 @@ const members: Member[] = [
         
         Issue d’une famille de vignerons de Fleurie, j'ai consacré ma vie professionnelle au service social pour différents ministères. Conseillère municipale sortante, je me suis particulièrement investie au CCAS pour soutenir les plus fragiles d'entre nous. 
         
-        Très active dans le milieu associatif, notamment pour les résidents de l'EHPAD et nos anciens, je souhaite continuer à mettre mes compétences humaines et administratives au service d'une commune solidaire et attentionnée envers chacun de ses habitants.`,
+        Très active dans le milieu associatif, notamment pour les résidents de l'EHPAD (FLORA) et le comité des anciens, je souhaite continuer à mettre mes compétences humaines et administratives au service d'une commune solidaire et attentionnée envers chacun de ses habitants.`,
         photo: moniquedutraiveportrait
     },
     {
@@ -83,7 +83,7 @@ const members: Member[] = [
         
         Originaire de Romanèche, j’ai grandi au cœur de nos vignes. 
         
-        Après des études d’œnologie et des expériences enrichissantes en Australie et aux États-Unis, je suis revenue aux racines pour travailler aux côtés de mon père sur le domaine familial. 
+        Après des études de viticulture et d’œnologie ainsi que des expériences enrichissantes en Australie et aux États-Unis, je suis revenue aux racines pour travailler aux côtés de mon père sur le domaine familial. 
 
         Très impliquée dans la vie du Cru Moulin-à-Vent, je souhaite aujourd'hui apporter l'énergie de ma jeunesse et un regard neuf à notre conseil municipal. 
 
@@ -92,30 +92,47 @@ const members: Member[] = [
     },
     {
         name: "Joël Broutin",
-        profession: "",
-        engagement: "",
-        bio: bioEnCours,
+        profession: "Retraité - Secteur viticole",
+        engagement: "Romanéchois depuis 1971, engagé pour la VSR et la vie associative, passionné par le collectif et le rayonnement de notre commune.",
+        bio: `Romanéchois depuis 1971.
+        
+        Originaire du Nord, j’ai posé mes valises à Romanèche-Thorins en 1971 et je n'ai plus jamais quitté ce village qui m'a tant apporté. 
+        
+        Mon histoire ici est indissociable du club de football, la VSR, où j'ai vécu un long et beau parcours associatif : d'abord sur le terrain comme joueur, puis en coulisses comme secrétaire, pour terminer par la présidence du club.
+        
+        Marié, père et grand-père comblé, j'ai consacré ma carrière professionnelle à un groupement viticole du Beaujolais. C'est là que j'ai forgé mes convictions sur la valeur du travail collectif et du sens de l'écoute. 
+        
+        Élu en 2020 et actuellement adjoint en charge de la vie associative, mon ambition reste intacte : je souhaite poursuivre mon engagement pour continuer à redonner de l'âme à notre commune et faire rayonner ses richesses au profit de tous les habitants.
+        `,
         photo: joelbroutinportrait
     },
     {
         name: "Pascale Romani",
-        profession: "",
-        engagement: "",
-        bio: bioEnCours,
+        profession: "Retraité - Ancienne responsable à la CPAM",
+        engagement: "Quartier de la Pierre depuis 2008, engagée pour le fleurissement et l’embellissement durable de notre village.",
+        bio: `Quartier de la Pierre depuis 2008.
+        
+        Arrivée de Mâcon il y a 18 ans, j'ai tout de suite eu à cœur d'apporter de la couleur et de la vie à notre cadre de vie. 
+        
+        Passionnée de jardinage et soucieuse de protéger l'environnement, j'ai créé le Comité de Fleurissement et d’Embellissement pour partager mes connaissances et végétaliser notre bourg.
+        
+        Grâce à la liberté d'action et au soutien précieux des élus et des agents municipaux, nous avons pu installer de nombreux massifs floraux et participer à la création du verger communal. 
+        
+        Aujourd'hui, je souhaite passer à l'étape supérieure en intégrant l'équipe de Yannick Vacher : parce qu'un peu de verdure ne peut faire que du bien, je m'engage pour poursuivre activement cette démarche d'embellissement durable pour tous les habitants.
+        `,
         photo: pascaleromaniportrait
     },
     {
         name: "Maurice Favre",
         profession: "Retraité – Directeur Technique",
         engagement: "Mon engagement personnel : mettre mon expertise professionnelle au service du suivi rigoureux de nos chantiers communaux.",
-        bio: `Résident depuis 1981
+        bio: `Résident depuis 1981.
         
         Directeur technique dans le bâtiment durant ma carrière, j’ai toujours aimé construire et organiser. 
         
         Engagé de longue date dans le milieu associatif et passionné d'auto-modélisme, j'ai rejoint le conseil en 2014 avant de devenir Adjoint en charge des travaux en 2020. 
         
-        Mon engagement personnel reste le même : mettre mon expertise professionnelle au service de notre liste pour assurer le suivi rigoureux de nos chantiers communaux et préparer l'avenir
-de nos bâtiments.`,
+        Mon engagement personnel reste le même : mettre mon expertise professionnelle au service de notre liste pour assurer le suivi rigoureux de nos chantiers communaux et préparer l'avenir de nos bâtiments.`,
         photo: mauricefavreportrait
     },
     {
