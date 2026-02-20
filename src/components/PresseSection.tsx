@@ -7,6 +7,8 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import tract20260210preview from '@/assets/tracts/TRACT-20260210.png';
 import tract20260210 from '@/assets/tracts/TRACT-20260210.pdf';
+import tract20260220preview from '@/assets/tracts/TRACT-20260220.png';
+import tract20260220 from '@/assets/tracts/TRACT-20260220.pdf';
 
 const pressArticles = [
   {
@@ -36,6 +38,12 @@ const tracts = [
     pdfUrl: tract20260210,
     previewImage: tract20260210preview,
   },
+    {
+        title: "",
+        date: "20 Février 2026",
+        pdfUrl: tract20260220,
+        previewImage: tract20260220preview,
+    },
 ];
 
 const PresseSection = () => {
