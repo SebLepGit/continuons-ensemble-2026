@@ -108,7 +108,7 @@ const members: Member[] = [
     },
     {
         name: "Pascale Romani",
-        profession: "Retraité - Ancienne responsable à la CPAM",
+        profession: "Retraitée - Ancienne responsable à la CPAM",
         engagement: "Quartier de la Pierre depuis 2008, engagée pour le fleurissement et l’embellissement durable de notre village.",
         bio: `Quartier de la Pierre depuis 2008.
         
@@ -166,7 +166,7 @@ const members: Member[] = [
     },
     {
         name: "Josette Gombert",
-        profession: "Retraité - Institutrice",
+        profession: "Retraitée - Institutrice",
         engagement: "Je reste présente pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.",
         bio: `Quartier des Guillates depuis 15 ans.
         
@@ -193,7 +193,7 @@ const members: Member[] = [
     },
     {
         name: "Catherine Vincent",
-        profession: "Retraité - Salariée locale",
+        profession: "Retraitée - Salariée locale",
         engagement: "Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.",
         bio: `J’ai toujours vécu à Romanèche, un village auquel je suis viscéralement attachée. 
         
@@ -249,7 +249,7 @@ const members: Member[] = [
     },
     {
         name: "Annie Rochet",
-        profession: "Retraité - Horlogère",
+        profession: "Retraitée - Horlogère",
         engagement: "M’investir avec sérieux et disponibilité pour faire vivre notre commune, préserver son cadre naturel et contribuer, avec des idées concrètes, à son dynamisme et à son attractivité",
         bio: `Rue des Vignes depuis 2025.
         
