@@ -255,7 +255,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
         Marié, père et grand-père comblé, j'ai consacré ma carrière professionnelle à un groupement viticole du Beaujolais. C'est là que j'ai forgé mes convictions sur la valeur du travail collectif et du sens de l'écoute. 
         
         Élu en 2020 et actuellement adjoint en charge de la vie associative, mon ambition reste intacte : je souhaite poursuivre mon engagement pour continuer à redonner de l'âme à notre commune et faire rayonner ses richesses au profit de tous les habitants.
-        `,photo:BI},{name:"Pascale Romani",profession:"Retraité - Ancienne responsable à la CPAM",engagement:"Quartier de la Pierre depuis 2008, engagée pour le fleurissement et l’embellissement durable de notre village.",bio:`Quartier de la Pierre depuis 2008.
+        `,photo:BI},{name:"Pascale Romani",profession:"Retraitée - Ancienne responsable à la CPAM",engagement:"Quartier de la Pierre depuis 2008, engagée pour le fleurissement et l’embellissement durable de notre village.",bio:`Quartier de la Pierre depuis 2008.
         
         Arrivée de Mâcon il y a 18 ans, j'ai tout de suite eu à cœur d'apporter de la couleur et de la vie à notre cadre de vie. 
         
@@ -285,7 +285,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
         
         Profondément attaché au quartier de la Pierre, je souhaite désormais porter cet engagement au sein de notre conseil municipal. 
         
-        Passionné de musique et de théâtre, je suis convaincu que la culture est le ciment de notre lien social. Elle favorise le partage et le dynamisme, des valeurs que je veux défendre pour notre commune.`,photo:FI},{name:"Josette Gombert",profession:"Retraité - Institutrice",engagement:"Je reste présente pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.",bio:`Quartier des Guillates depuis 15 ans.
+        Passionné de musique et de théâtre, je suis convaincu que la culture est le ciment de notre lien social. Elle favorise le partage et le dynamisme, des valeurs que je veux défendre pour notre commune.`,photo:FI},{name:"Josette Gombert",profession:"Retraitée - Institutrice",engagement:"Je reste présente pour accompagner la finalisation de nos grands projets et aider à imaginer ceux de demain.",bio:`Quartier des Guillates depuis 15 ans.
         
         Ancienne institutrice, j'ai eu l'honneur de servir notre commune en tant qu'adjointe au social durant ce mandat. 
         
@@ -298,7 +298,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
         Pour m'ancrer concrètement dans la vie locale, j'ai rejoint le Comité des Fêtes et je ne manque jamais le rendez-vous annuel des vendanges. 
         
         Professionnel de l'informatique, je souhaite mettre ma technicité au service d'une gestion municipale dont j'ai pu apprécier le sérieux et la rigueur. Je m'engage pour une commune moderne, efficace et toujours tournée vers l'avenir.
-        `,photo:YI},{name:"Catherine Vincent",profession:"Retraité - Salariée locale",engagement:"Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.",bio:`J’ai toujours vécu à Romanèche, un village auquel je suis viscéralement attachée. 
+        `,photo:YI},{name:"Catherine Vincent",profession:"Retraitée - Salariée locale",engagement:"Mon ambition est simple : être à votre écoute et participer activement aux projets qui font battre le cœur de notre vie locale.",bio:`J’ai toujours vécu à Romanèche, un village auquel je suis viscéralement attachée. 
         
         En y travaillant durant la majeure partie de ma carrière, j'ai eu la chance de bien connaître notre commune et, surtout, de vous connaître, vous, ses habitants. 
         
@@ -326,7 +326,7 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
         J’ai consacré ma carrière au soin des autres en tant qu’aide-soignant. Fort de 5 années passées à l’EHPAD de Romanèche-Thorins et de 10 ans d’engagement auprès de l’ADMR, j’ai tissé des liens profonds et sincères avec de nombreux habitants de notre commune.
         
         Je rejoins Yannick Vacher avec la volonté de représenter ces personnes que j'ai côtoyées quotidiennement. Mon souhait est de porter nos idées communes et de m'investir pleinement pour poursuivre l'évolution positive et humaine de notre village.
-        `,photo:zI},{name:"Annie Rochet",profession:"Retraité - Horlogère",engagement:"M’investir avec sérieux et disponibilité pour faire vivre notre commune, préserver son cadre naturel et contribuer, avec des idées concrètes, à son dynamisme et à son attractivité",bio:`Rue des Vignes depuis 2025.
+        `,photo:zI},{name:"Annie Rochet",profession:"Retraitée - Horlogère",engagement:"M’investir avec sérieux et disponibilité pour faire vivre notre commune, préserver son cadre naturel et contribuer, avec des idées concrètes, à son dynamisme et à son attractivité",bio:`Rue des Vignes depuis 2025.
         
         Originaire du Haut-Doubs, j’ai exercé le métier d’horlogère avec passion pendant de nombreuses années, un métier de précision, de patience et d’exigence. 
         
