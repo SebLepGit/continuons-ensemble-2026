@@ -8,7 +8,7 @@
 
 @font-face {
     font-family: 'Home';
-    src: url('./assets/fonts/home.ttf') format('truetype');
+    src: url('./assets/fonts/Home.ttf') format('truetype');
     font-weight: 400; /* ou 100, 200… selon la variante */
     font-style: normal;
     font-display: swap;
