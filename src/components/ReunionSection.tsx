@@ -43,7 +43,7 @@ const ReunionSection = () => {
                             <p className="text-lg md:text-xl lg:text-2xl text-white leading-relaxed">
                                 Le{' '}
                                 <span className="inline-flex whitespace-nowrap bg-white px-2 py-0.5 rounded text-secondary font-semibold">
-                                    samedi 15 mars
+                                    dimanche 15 mars
                                 </span>{' '}
                                 c'est le jour du vote et{' '}
                                 <span className="inline-flex whitespace-nowrap bg-white px-2 py-0.5 rounded text-secondary font-semibold">
