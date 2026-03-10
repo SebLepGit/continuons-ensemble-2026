@@ -7,7 +7,7 @@ import logoDark from '@/assets/logos/continons-ensemble-dark.svg';
 const navLinks = [
   { name: 'Accueil', href: '#hero' },
   { name: 'Message', href: '#message' },
-  { name: 'Réunion publique', href: '#reunion' },
+  { name: 'Votez le 15 mars', href: '#reunion' },
   { name: 'Actualités & Ressources', href: '#presse' },
   { name: 'Programme', href: '#programme' },
   { name: 'Notre équipe', href: '#membres' },

@@ -9,6 +9,8 @@ import tract20260210preview from '@/assets/tracts/TRACT-20260210.png';
 import tract20260210 from '@/assets/tracts/TRACT-20260210.pdf';
 import tract20260220preview from '@/assets/tracts/TRACT-20260220.png';
 import tract20260220 from '@/assets/tracts/TRACT-20260220.pdf';
+import tract20260310preview from '@/assets/tracts/TRACT-20260310.png';
+import tract20260310 from '@/assets/tracts/TRACT-20260310.pdf';
 
 const pressArticles = [
   {
@@ -43,6 +45,12 @@ const tracts = [
         date: "20 Février 2026",
         pdfUrl: tract20260220,
         previewImage: tract20260220preview,
+    },
+    {
+        title: "",
+        date: "10 Mars 2026",
+        pdfUrl: tract20260310,
+        previewImage: tract20260310preview,
     },
 ];
 
